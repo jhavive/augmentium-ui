@@ -1,0 +1,145 @@
+<template>
+    <div class="body">
+    <div class="bg"></div>
+    <div class="content">
+        <div class="lower-container">
+            <div class="lower-container-content">
+                <h1 class="lower-container-menu-header"><img src="../assets/images/logo.png" id="logoimg"/>{{heading}}</h1>
+                <div>
+                    <ul style="list-style-type: none;padding:0px;" v-on:click="selectItem">
+                        <li v-for="item in items" v-bind:key="item" v-bind:class="[selectedItem===item ? 'active' : '', 'lower-container-menu']">
+                            {{ item }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="upper-content">
+            <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
+                <h2>{{c.heading}}</h2>
+                <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
+                <ul v-if="c.list" class="upper-container-content-content-list">
+                    <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</template>
+
+<script>
+/* eslint-disable */
+export default {
+    name: 'Template',
+    data () {
+        let items = ['Company Profile', 'Vision Mission']
+        return {
+            msg: 'Welcome to Your Vue.js App',
+            items: this.menuItems,
+            selectedItem: this.menuItems[0],
+            content: this.content
+        }
+    },
+    props: ['heading', 'content', 'menuItems'],
+    methods: {
+        selectItem: function(event){
+            console.log(this.selectedItem," ",event.target.innerHTML.toString().trim());
+            this.selectedItem = event.target.innerHTML.toString().trim();
+        }
+    },
+    watch: { 
+      	content: function(newVal, oldVal) { // watch it
+          console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+          this.content = newVal;
+        },
+        menuItems: function(newVal, oldVal) { // watch it
+          console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+          this.items = newVal;
+          this.selectedItem = newVal[0];
+        },
+    }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .body{
+        position:relative;
+        width:100%;
+        height: 100%;
+        /* background:; */
+    }
+    .bg{
+        width:100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .lower-container{
+        width: 75%;
+        min-height: 35%;
+        background: white;
+        margin: 70px auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        text-align: left;
+        padding-bottom: 20px;
+    }
+    #logoimg{
+        margin-right:10px;
+        width:20%;
+    }
+    .lower-container-menu-header {
+        font-family: Helvetica, sans-serif;
+        color: #41A5FF;
+        font-weight: 100;
+
+    }
+    .lower-container-content{
+        width:20%;
+        margin:100px 0px 0px 20px;
+        text-align: left;
+        /* text-align: center; */
+    }
+    .active {
+        font-weight: bold;
+    }
+    .lower-container-menu{
+        margin-bottom: 25px;
+        cursor: pointer;
+        text-align: left;
+        padding-left: 10%;
+        white-space: pre-line;
+    }
+
+    .upper-content{
+        width: 55%;
+        height: 75%;
+        background:#F5F5F5;
+        margin: 70px auto;
+        position: absolute;
+        top: 80px;
+        left: 16%;
+        right: 0;
+        border-radius: 25px;
+        text-align: left;
+        border:1px solid #41A5FF;
+        overflow: scroll;
+    }
+    .upper-container-content{
+        padding:10px 30px;
+    }
+    .upper-container-content-content {
+        line-height:30px;
+        white-space: pre-line;
+    }
+    .upper-container-content-content-list {
+        line-height:30px;
+        white-space: pre-line;
+    }
+</style>
