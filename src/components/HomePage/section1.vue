@@ -38,49 +38,91 @@ export default {
         width:100%;
         height: 100%;
     }
-    #menu-container{
-        position:absolute;
-        width: 42vw;
-        height: 42vw;
-        top: 50%;
-        transform: translateY(-50%);
-        left:0;
-        right:0;
-        background: white;
-        border-radius:50%;
-        margin:0px auto;
-        opacity: 0.8;
+    @media only screen and (max-width: 750px) {
+        #menu-container{
+            position:absolute;
+            width: 75vw;
+            height: 75vw;
+            top: 46%;
+            transform: translateY(-46%);
+            left:0;
+            right:0;
+            background: white;
+            border-radius:50%;
+            margin:0px auto;
+            opacity: 0.8;
+        }.circle-container {
+            position:absolute;
+            top: 43%;
+            transform: translateY(-43%);
+            left:0;
+            right:0;
+            margin:0px auto;
+        }.circle-container a {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left:0;
+            right:0;
+            margin: 0px auto;
+            text-decoration: none;
+            width: 13%; height: auto;
+            font-size: .6em;
+            word-wrap: break-word;
+        }
+        .menu-image {
+            width:100%;
+        }
+        .deg0 { transform: translate(200%); } /* 12em = half the width of the wrapper */
+        .deg45 { transform: rotate(55deg) translate(200%) rotate(-55deg); }
+        .deg135 { transform: rotate(125deg) translate(200%) rotate(-125deg); }
+        .deg180 { transform: translate(-200%); }
+        .deg225 { transform: rotate(235deg) translate(200%) rotate(-235deg); }
+        .deg315 { transform: rotate(305deg) translate(200%) rotate(-305deg); }
     }
-    .circle-container {
-        position:absolute;
-        top: 43%;
-        transform: translateY(-43%);
-        left:0;
-        right:0;
-        margin:0px auto;
+    @media only screen and (min-width: 750px) {
+        #menu-container{
+            position:absolute;
+            width: 42vw;
+            height: 42vw;
+            top: 50%;
+            transform: translateY(-50%);
+            left:0;
+            right:0;
+            background: white;
+            border-radius:50%;
+            margin:0px auto;
+            opacity: 0.8;
+        }.circle-container {
+            position:absolute;
+            top: 43%;
+            transform: translateY(-43%);
+            left:0;
+            right:0;
+            margin:0px auto;
+        }.circle-container a {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left:0;
+            right:0;
+            margin: 0px auto;
+            text-decoration: none;
+            width: 8%; height: auto;
+            font-size: .8em;
+        }
+        .menu-image {
+            width:100%;
+        }
+        .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
+        .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }
+        .deg135 { transform: rotate(125deg) translate(185%) rotate(-125deg); }
+        .deg180 { transform: translate(-185%); }
+        .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
+        .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }
     }
-    .circle-container a {
-        display: block;
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        left:0;
-        right:0;
-        margin: 0px auto;
-        text-decoration: none;
-        width: 8%; height: auto;
-        font-size: .8em;
-    }
-    .menu-image {
-        width:100%;
-    }
-    .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
-    .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }
-    .deg135 { transform: rotate(125deg) translate(185%) rotate(-125deg); }
-    .deg180 { transform: translate(-185%); }
-    .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
-    .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }
-
     /* this is just for showing the angle on hover */
     .circle-container a:not(.center):before {
         position: absolute;

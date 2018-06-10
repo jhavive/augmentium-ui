@@ -17,7 +17,7 @@ const data = {
         },
         {
           heading: 'Email',
-          content: ''
+          content: 'dasaratharaman@augmentium.net \n robinder@augmentium.net \n sameer@augmentium.net'
         }
       ],
       'Disclaimer': [
@@ -113,7 +113,7 @@ const data = {
           ]
         },
         {
-          heading: 'Market  Research ',
+          subHeading: 'Market  Research ',
           list: [
             'Advising  on  the  sectoral  data  and  market  feedback  required  for  the  Venture. ',
             'Framing  an  optimum  market  research  programme ',
@@ -121,7 +121,7 @@ const data = {
           ]
         },
         {
-          heading: 'Identification  of  Partners',
+          subHeading: 'Identification  of  Partners',
           list: [
             'Relevance  and  necessity  of  Equity  partners ',
             'Consideration  of  appropriate  strategic  partners',
@@ -130,7 +130,7 @@ const data = {
           ]
         },
         {
-          heading: 'Preparation  of  Financial  and  Business  Plans ',
+          subHeading: 'Preparation  of  Financial  and  Business  Plans ',
           list: [
             'Detailed  analysis  of  sector  performance ',
             'Thorough  study  of  competitors ',
@@ -140,7 +140,7 @@ const data = {
           ]
         },
         {
-          heading: 'Monitoring  and Implementation ',
+          subHeading: 'Monitoring  and Implementation ',
           list: [
             'Overseeing  actual  setup  of  the  venture',
             'Identifying  appropriate  key  Staff ',
@@ -155,7 +155,7 @@ const data = {
           content: 'In  this  global  economy  Indian  Organisations  are  seeking  opportunities  outside  their  own  shores.  Augmentium,  with  its  International  affiliations  can  facilitate  a  successful  conclusion  of  such  ventures. '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'Identification  of  Countries  where  foreign  investment  is  seeked',
             'Sector  analysis  where  opportunities  exist',
@@ -173,7 +173,7 @@ const data = {
           content: 'For  any  venture,  an  Organisation  needs  to  fully  understand  the  sector  in  terms  of  commercial,  financial,  legal  and  international  considerations.  Augmentium  would  always  advise  that,  as  a  prelude  to  deciding  upon  setting  up  of  a  venture,  a  comprehensive  feasibility  report  is  prepared  and  analysed.  Augmentium,  through  its  strong  comprehensive  infrastructure  prepares  the  document  which  can  be  relied  upon  as  a  stepping  stone  to  setup.  The  Report  considers  the  following  aspects: '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'complete  commercial  review  of  the  Industry',
             'Consideration  of  the  economic  parameters  prevailing',
@@ -189,7 +189,7 @@ const data = {
           content: 'Companies  at  times  require  independent  analysis  of  their  Organisation  and  advise  on  optimization  of  their  performance.  Augmentium  guides  Companies  with  specialist  strategies  for  optimization  comprising  of. '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'Turnaround  strategy  for  under  performing  Companies  and  preparing  a  strategic  plan  which  addresses  the  challenges  being  faced.',
             'Restructuring  advice  –  consideration  of  the  financial  structure  of  the  Organisation  to  ensure  optimum  utilization  of  Equity  and  Debt  funds.',
@@ -203,7 +203,7 @@ const data = {
           content: 'The  key  and  ongoing  aspect  for  any  Organisation  is  fund  optimization,  be  it  equity  or  debt.  Augmentium,  through  its  resources  can  quickly  and  efficiently  identify  the  right  structure  for  the  Organisation  by  evaluating  the  following:  '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'Analysing  and  re-evaluating  the  prevailing  equity  /  debt  structure',
             'Identifying  and  assisting  in  raising  new  capital',
@@ -219,7 +219,7 @@ const data = {
           content: 'Integral  to  any  Organisation’s  performance  is  an  efficient  and  online  Management  Information  System.  Augmentium  critically  analyses  the  systems  operating  and  advises  Companies  on  action  necessary  for  effective  business  decision  making  through  a  very  practical  approach  by  way  of  undertaking, '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'Comprehensive  System  study',
             'Full  understanding  of  Company  requirements',
@@ -235,7 +235,7 @@ const data = {
           content: 'The  M&A  Advisory  service  of  Augmentium  is  dedicated  and  focused  on  facilitating  and  expediting  the  merger  and  acquisition  process.  Our  experience  of  the  local  and  international  market  enables  us  to  have  a  successful  closure  of  all  the  tractions.  We  have  the  capacity  to  target  alliances  globally.  We  also  try  to  channelize  the  company’s  capital  and  time  in  an  efficient  and  disciplined  manner,  centrally  focusing  on  keeping  your  company’s  benefit  primordial.  We  provide  end  to  end  solutions.  Our  M&A  Services  can  therefore  be  categorized  into  the  following  sections '
         },
         {
-          heading: '',
+          subHeading: '',
           list: [
             'Buy/Sell  Advisory  services',
             'Business  Modelling  after  evaluating  the  risks  and  insurances  for  mergers',

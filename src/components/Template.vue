@@ -4,7 +4,10 @@
     <div class="content">
         <div class="lower-container">
             <div class="lower-container-content">
-                <h1 class="lower-container-menu-header"><img src="../assets/images/logo.png" id="logoimg"/>{{heading}}</h1>
+                <div class="header-container">
+                    <img id="header-logo" src="../assets/images/Home.png">
+                    <h1 class="lower-container-menu-header">{{heading}}</h1>
+                </div>
                 <div>
                     <ul style="list-style-type: none;padding:0px;" v-on:click="selectItem">
                         <li v-for="item in items" v-bind:key="item" v-bind:class="[selectedItem===item ? 'active' : '', 'lower-container-menu']">
@@ -16,7 +19,8 @@
         </div>
         <div class="upper-content">
             <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
-                <h2>{{c.heading}}</h2>
+                <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
+                <div v-if="c.subHeading"><h2>{{c.subHeading}}</h2></div>
                 <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
                 <ul v-if="c.list" class="upper-container-content-content-list">
                     <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
@@ -98,6 +102,7 @@ export default {
         font-family: Helvetica, sans-serif;
         color: #41A5FF;
         font-weight: 100;
+        margin: 10px;
 
     }
     .lower-container-content{
@@ -110,7 +115,7 @@ export default {
         font-weight: bold;
     }
     .lower-container-menu{
-        margin-bottom: 25px;
+        /* margin-bottom: 25px; */
         cursor: pointer;
         text-align: left;
         padding-left: 10%;
@@ -130,6 +135,7 @@ export default {
         text-align: left;
         border:1px solid #41A5FF;
         overflow: scroll;
+        font-family: 'Raleway'
     }
     .upper-container-content{
         padding:10px 30px;
@@ -141,5 +147,15 @@ export default {
     .upper-container-content-content-list {
         line-height:30px;
         white-space: pre-line;
+    }
+    .header-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+    }
+    #header-logo {
+        width: 60px;
+        /* height: 60px; */
     }
 </style>
