@@ -70,16 +70,19 @@ export default {
             width: 13%; height: auto;
             font-size: .6em;
             word-wrap: break-word;
+            color: #000000;
+            /* color: #41A5FF */
         }
         .menu-image {
             width:100%;
+            filter: hue-rotate(359deg) saturate(67%) brightness(41%);
         }
-        .deg0 { transform: translate(200%); } /* 12em = half the width of the wrapper */
-        .deg45 { transform: rotate(55deg) translate(200%) rotate(-55deg); }
-        .deg135 { transform: rotate(125deg) translate(200%) rotate(-125deg); }
-        .deg180 { transform: translate(-200%); }
-        .deg225 { transform: rotate(235deg) translate(200%) rotate(-235deg); }
-        .deg315 { transform: rotate(305deg) translate(200%) rotate(-305deg); }
+        .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
+        .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }
+        .deg135 { transform: rotate(125deg) translate(218500%) rotate(-125deg); }
+        .deg180 { transform: translate(-185%); }
+        .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
+        .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }
     }
     @media only screen and (min-width: 750px) {
         #menu-container{
@@ -112,9 +115,12 @@ export default {
             text-decoration: none;
             width: 8%; height: auto;
             font-size: .8em;
+            color: #000000;
+            /* color: #41A5FF; */
         }
         .menu-image {
-            width:100%;
+            filter: hue-rotate(359deg) saturate(67%) brightness(41%);
+            width:90%;
         }
         .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
         .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }

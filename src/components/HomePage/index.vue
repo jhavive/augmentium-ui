@@ -5,7 +5,7 @@
         <div v-bind:class="(!secondTime)?'logo':'logostatic'">
             <!-- <div class="upper-part-logo"></div> -->
             <div class="logo-border upper-part-logo"><img src="../../assets/images/logo.png" id="logoimg"/></div>
-            <h1 class="">AUGMENTIUM</h1>
+            <h1 class="name">AUGMENTIUM</h1>
             <h3 id="advisor">Advisors</h3>
             <!-- <div class="lower-part-logo"></div> -->
             <div class="logo-border lower-part-logo"></div>
@@ -103,18 +103,7 @@ export default {
     .bg{
         width:100%;
         height: 100%;
-        /* background-color: black;
-        background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url(./topography.png);
-        opacity: .6;
-        background-blend-mode:difference */
     }
-    /* .bg:before {
-        content: "";
-        position: absolute;
-        left: 0; right: 0;
-        top: 0; bottom: 0;
-        background: rgba(0,0,0,.4);
-    } */
     .content{
         width:100%;
         position: absolute;
@@ -141,15 +130,31 @@ export default {
         -o-animation: fadein 4s; /* Opera < 12.1 */
         animation: fadein 4s;
     }
-    #logoimg{
-        margin-top:10px;
-        width:30%;
+    @media only screen and (max-width: 750px) {
+        #logoimg{
+            margin-top:5px;
+            width:30%;
+        }
+        #advisor{
+            border-left: .5vw solid white;
+            border-right: .5vw solid white;
+            margin: 0px auto;
+            width: 20vw;
+            font-size: 2vw;
+        }
     }
-    #advisor{
-        border-left: .5vw solid white;
-        border-right: .5vw solid white;
-        margin: 0px auto;
-        width: 20vw;
+    @media only screen and (min-width: 750px) {
+        #logoimg{
+            margin-top:10px;
+            width:30%;
+        }
+        #advisor{
+            border-left: .5vw solid white;
+            border-right: .5vw solid white;
+            margin: 0px auto;
+            width: 20vw;
+            font-size: 3vw;
+        }
     }
     .logo-border {
         margin: 0px auto;
@@ -163,7 +168,7 @@ export default {
         text-align: center;
     }
     .lower-part-logo {
-        height: 2.8vw;
+        height: 2.4vw;
         border-bottom: 0.5vw solid #fff;
     }
 

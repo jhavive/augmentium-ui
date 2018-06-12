@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* eslint-disable */
 #navigation{
   position: fixed;
@@ -53,7 +53,7 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.navlist{
+/* .navlist{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ export default {
   height:100%;
   overflow-x: scroll;
   width:90%;
-}
+} */
 .nav-items {
     float: left;
     /* height:100%; */
@@ -106,7 +106,7 @@ export default {
   text-align: right;
 }
 #logoimgMenu {
-  width: 60px;
+  width: 45px;
   height: 50%;
 }
 
@@ -137,11 +137,12 @@ export default {
 .sidebar {
   	position: fixed;
   	top: 100px;
-	right: 0px;
-	background: #F5F5F5;
-	height: 100%;
-	width: 25%;
-  box-shadow: 0px 38px 50px 5px grey;
-	
+    right: 0px;
+    bottom: 0px;
+    background: #F5F5F5;
+    /* height: 100%; */
+    width: 125px;
+    box-shadow: 0px 38px 50px 5px grey;
+    overflow-y: scroll;
 }
 </style>

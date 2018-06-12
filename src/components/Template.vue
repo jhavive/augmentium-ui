@@ -6,7 +6,8 @@
             <div class="lower-container-content">
                 <div class="header-container">
                     <img id="header-logo" src="../assets/images/Home.png">
-                    <h1 class="lower-container-menu-header">{{heading}}</h1>
+                    <!-- <img id="header-logo" :src="getImagePath(imagePath)"> -->
+                    <h2 class="lower-container-menu-header">{{heading}}</h2>
                 </div>
                 <div>
                     <ul style="list-style-type: none;padding:0px;" v-on:click="selectItem">
@@ -20,7 +21,7 @@
         <div class="upper-content">
             <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
                 <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
-                <div v-if="c.subHeading"><h2>{{c.subHeading}}</h2></div>
+                <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
                 <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
                 <ul v-if="c.list" class="upper-container-content-content-list">
                     <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
@@ -45,11 +46,16 @@ export default {
             content: this.content
         }
     },
-    props: ['heading', 'content', 'menuItems'],
+    props: ['imagePath','heading', 'content', 'menuItems'],
     methods: {
         selectItem: function(event){
             console.log(this.selectedItem," ",event.target.innerHTML.toString().trim());
             this.selectedItem = event.target.innerHTML.toString().trim();
+        },
+        getImagePath(item) {
+            let images = require.context('../assets/images/', false)
+            return images(item)
+            // return require(item);
         }
     },
     watch: { 
@@ -74,17 +80,40 @@ export default {
         height: 100%;
         /* background:; */
     }
-    .bg{
+    /* .bg{
         width:100%;
         height: 100%;
         background-color: black;
         opacity: 0.4;
+    } */
+    @media only screen and (min-width: 1024px) {
+        .lower-container{
+            width: 80%;
+            margin: 70px auto;
+        }
+        .upper-content{
+            left: 20%;
+            top: 80px;
+            width: 55%;
+            height: 75%;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .lower-container{
+            width: 100%;
+            margin: 30px auto;
+        }
+        .upper-content{
+            left: 25%;
+            top: 150px;
+            width: 65%;
+            height: 65%;
+        }
     }
     .lower-container{
-        width: 75%;
+        /* width: 75%; */
         min-height: 35%;
         background: white;
-        margin: 70px auto;
         position: absolute;
         top: 0;
         left: 0;
@@ -102,7 +131,8 @@ export default {
         font-family: Helvetica, sans-serif;
         color: #41A5FF;
         font-weight: 100;
-        margin: 10px;
+        margin: 15px 10px;
+        filter : hue-rotate(359deg) saturate(67%) brightness(41%);
 
     }
     .lower-container-content{
@@ -123,13 +153,9 @@ export default {
     }
 
     .upper-content{
-        width: 55%;
-        height: 75%;
         background:#F5F5F5;
         margin: 70px auto;
         position: absolute;
-        top: 80px;
-        left: 16%;
         right: 0;
         border-radius: 25px;
         text-align: left;
@@ -139,10 +165,12 @@ export default {
     }
     .upper-container-content{
         padding:10px 30px;
+        text-align: justify;
     }
     .upper-container-content-content {
         line-height:30px;
         white-space: pre-line;
+        text-align: justify;
     }
     .upper-container-content-content-list {
         line-height:30px;
@@ -155,7 +183,9 @@ export default {
         height: 60px;
     }
     #header-logo {
-        width: 60px;
+        filter : hue-rotate(359deg) saturate(67%) brightness(41%);
+        width: 52px;
         /* height: 60px; */
+        margin-left: 10px
     }
 </style>

@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #navigation{
   position: fixed;
@@ -33,7 +33,7 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.navlist{
+/* .navlist{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ export default {
   height:100%;
   overflow-x: scroll;
   width:90%;
-}
+} */
 .nav-items {
     float: left;
     /* height:100%; */

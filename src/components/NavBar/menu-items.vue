@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #navigation{
   position: fixed;
@@ -53,9 +53,10 @@ export default {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height:100%;
-  overflow-x: scroll;
+  /* overflow: hidden; */
+  /* height:100%; */
+  bottom: 0px;
+  overflow-y: scroll;
   width:90%;
 }
 .nav-items {
@@ -69,8 +70,9 @@ export default {
 .nav-image {
   /* width:100%; */
   height: 60px;
+  filter : hue-rotate(359deg) saturate(67%) brightness(41%);
   /* -webkit-filter : hue-rotate(180deg); */
-    filter : hue-rotate(359deg) saturate(67%) brightness(41%);;
+    /* filter : hue-rotate(359deg) saturate(67%) brightness(41%);; */
 }
 .nav-items a {
     display: block;
