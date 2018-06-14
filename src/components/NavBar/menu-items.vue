@@ -3,7 +3,7 @@
         <li v-bind:class="[$route.path==='/' ? 'actives' : '', 'nav-items']">
             <router-link to="/" exact><div><img class="nav-image" src="../../assets/images/Home.png"/><br/>Home</div></router-link>
         </li>
-        <li v-bind:class="[$route.path==='/about' ? 'actives' : '', 'nav-items']">
+        <li v-bind:class="[$route.path==='/about' ? 'actives' : '', 'nav-items']" v-on:click="(onclick)?onclick:null">
             <router-link to='about'><div><img class="nav-image" src="../../assets/images/About.png"/><br/>About</div></router-link>
         </li>
         <li v-bind:class="[$route.path==='/approach' ? 'actives' : '', 'nav-items']">
@@ -14,7 +14,7 @@
             <!-- <router-link :to="'team'" replace><img class="nav-image" src="./assets/images/Team.png"/></router-link> -->
         </li>
         <li v-bind:class="[$route.path==='/' ? 'actives' : '', 'nav-items']">
-            <router-link to='invetment'><div><img class="nav-image" src="../../assets/images/Investments.png"/><br/>Investments</div></router-link>
+            <router-link to='invetment'><div><img class="nav-image" src="../../assets/images/Investments.png"/><br/>Clients</div></router-link>
         </li>
         <li v-bind:class="[$route.path==='/news' ? 'actives' : '', 'nav-items']">
             <router-link to='news'><div><img class="nav-image" src="../../assets/images/News.png"/><br/>News</div></router-link>
@@ -28,6 +28,7 @@
 <script>
 export default {
   name: 'menuItem',
+  props:['onclick'],
   data: function () {
     return {
     }

@@ -5,8 +5,8 @@
         <div class="lower-container">
             <div class="lower-container-content">
                 <div class="header-container">
-                    <img id="header-logo" src="../assets/images/Home.png">
-                    <!-- <img id="header-logo" :src="getImagePath(imagePath)"> -->
+                    <!-- <img id="header-logo" src="../assets/images/Home.png"> -->
+                    <img id="header-logo" :src="getImagePath(imagePath)">
                     <h2 class="lower-container-menu-header">{{heading}}</h2>
                 </div>
                 <div>
@@ -53,9 +53,9 @@ export default {
             this.selectedItem = event.target.innerHTML.toString().trim();
         },
         getImagePath(item) {
-            let images = require.context('../assets/images/', false)
-            return images(item)
-            // return require(item);
+            // let images = require.context('../assets/images/', false)
+            // return images(item)
+            return require('../assets/images/'+item);
         }
     },
     watch: { 
@@ -165,11 +165,11 @@ export default {
     }
     .upper-container-content{
         padding:10px 30px;
-        text-align: justify;
+        /* text-align: justify; */
     }
     .upper-container-content-content {
         line-height:30px;
-        white-space: pre-line;
+        white-space: pre-wrap;
         text-align: justify;
     }
     .upper-container-content-content-list {
@@ -184,8 +184,8 @@ export default {
     }
     #header-logo {
         filter : hue-rotate(359deg) saturate(67%) brightness(41%);
-        width: 52px;
-        /* height: 60px; */
+        /* width: 52px; */
+        height: 60px;
         margin-left: 10px
     }
 </style>

@@ -2,14 +2,14 @@
     <div class="body">
     <div class="bg"></div>
     <div class="content">
-        <div v-bind:class="(!secondTime)?'logo':'logostatic'">
+        <!-- <div v-bind:class="(!secondTime)?'logo':'logostatic'"> -->
             <!-- <div class="upper-part-logo"></div> -->
-            <div class="logo-border upper-part-logo"><img src="../../assets/images/logo.png" id="logoimg"/></div>
-            <h1 class="name">AUGMENTIUM</h1>
-            <h3 id="advisor">Advisors</h3>
-            <!-- <div class="lower-part-logo"></div> -->
-            <div class="logo-border lower-part-logo"></div>
-        </div>
+            <div id="rect" v-bind:class="(!secondTime)?'moveUp':''" class=""></div>
+            <div id="logo-border" v-bind:class="(!secondTime)?'moveDown':''" ><img src="../../assets/images/logo.png" id="logoimg"  v-bind:class="(!secondTime)?'fadeIn':''" /></div>
+            <h1 id="name"  v-bind:class="(!secondTime)?'fadeIn':''" >AUGMENTIUM</h1>
+            <div id="advisor"  v-bind:class="(!secondTime)?'moveUp':''" ><h3 v-bind:class="(!secondTime)?'fadeIn':''" >Advisors</h3></div>
+            <div id="rect"  v-bind:class="(!secondTime)?'moveDown':''"></div>
+        <!-- </div> -->
     </div>
     <div class="scroll-down">
         <p class="scroll-down-p">Scroll Down</p>
@@ -44,33 +44,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    @keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+
+    @keyframes moveUp {
+        0%{
+            transform:translateY(100px)
+        }
+        50% {
+            transform:translateY(100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
     }
 
-    /* Firefox < 16 */
-    @-moz-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+    @keyframes moveDown {
+        0% {
+            transform:translateY(-100px)
+        }
+        50% {
+            transform:translateY(-100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
     }
 
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Internet Explorer */
-    @-ms-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-
-    /* Opera < 12.1 */
-    @-o-keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+    @keyframes fadeinWithDelay { 
+        0% {
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 
     h1, h2 {
@@ -80,8 +88,9 @@ export default {
         margin: 0px
     }
     h3{
-        margin: 0px;
+        margin: 7px;
         color:white;
+        font-size: 2rem;
     }
     ul {
         list-style-type: none;
@@ -98,7 +107,6 @@ export default {
         position:relative;
         width:100%;
         height: 100%;
-        /* background:; */
     }
     .bg{
         width:100%;
@@ -108,27 +116,6 @@ export default {
         width:100%;
         position: absolute;
         top:35%;
-    }
-    .logostatic{
-        width:30%;
-        margin: 0px auto;
-        text-align: center;
-        -webkit-animation: fadein 0s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 0s; /* Firefox < 16 */
-        -ms-animation: fadein 0s; /* Internet Explorer */
-        -o-animation: fadein 0s; /* Opera < 12.1 */
-        animation: fadein 0s;
-    }
-    .logo{
-        width:30%;
-        /* width:auto; */
-        margin: 0px auto;
-        text-align: center;
-        -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-        -o-animation: fadein 4s; /* Opera < 12.1 */
-        animation: fadein 4s;
     }
     @media only screen and (max-width: 750px) {
         #logoimg{
@@ -141,12 +128,15 @@ export default {
             margin: 0px auto;
             width: 20vw;
             font-size: 2vw;
+            padding: 10px 0px;
         }
     }
     @media only screen and (min-width: 750px) {
+        
         #logoimg{
             margin-top:10px;
             width:30%;
+                  
         }
         #advisor{
             border-left: .5vw solid white;
@@ -154,9 +144,27 @@ export default {
             margin: 0px auto;
             width: 20vw;
             font-size: 3vw;
+            padding: 10px 0px;
         }
     }
-    .logo-border {
+    #rect {
+        margin: 0px auto;
+        width: 21%;
+        height: .5vw;
+        background: white;
+    }
+    .moveUp {
+        animation: moveUp;
+        animation-duration: 3s;
+    }
+    .moveDown {
+        animation: moveDown;
+        animation-duration: 3s;
+    }
+    .fadeIn {
+        animation: fadeinWithDelay 6s;
+    }
+    #logo-border {
         margin: 0px auto;
         border-left: .5vw solid white;
         border-right: .5vw solid white;
@@ -186,7 +194,6 @@ export default {
         width: 10px;
         margin: 0px;
         font-size: 48px;
-        /* transform: rotate(90deg); */
     }
 
     #arrow{

@@ -7,7 +7,7 @@
             <router-link to='about' class='deg0'><div><img class="menu-image" src="../../assets/images/About.png"/><br/>About</div></router-link>
             <router-link to='approach' class='deg45'><div><img class="menu-image" src="../../assets/images/Approach.png"/><br/>Approach</div></router-link>
             <router-link to='team' class='deg135'><div><img class="menu-image" src="../../assets/images/Team.png"/><br/>Team</div></router-link>
-            <router-link to='invetment' class='deg180'><div><img class="menu-image" src="../../assets/images/Investments.png"/><br/>Investments</div></router-link>
+            <router-link to='invetment' class='deg180'><div><img class="menu-image" src="../../assets/images/Investments.png"/><br/>Clients</div></router-link>
             <router-link to='news' class='deg225'><div><img class="menu-image" src="../../assets/images/News.png"/><br/>News</div></router-link>
             <router-link to='contact' class='deg315'><div><img class="menu-image" src="../../assets/images/Contact_Us.png"/><br/>Contact Us</div></router-link>
         </div>
@@ -79,7 +79,7 @@ export default {
         }
         .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
         .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }
-        .deg135 { transform: rotate(125deg) translate(218500%) rotate(-125deg); }
+        .deg135 { transform: rotate(125deg) translate(185%) rotate(-125deg); }
         .deg180 { transform: translate(-185%); }
         .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
         .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }

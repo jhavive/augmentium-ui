@@ -2,8 +2,8 @@
 <div v-if="$route.path!=='/'" id="navigation">
 <div class="leftMenuItem"><img src="../../assets/images/logo.png" id="logoimgMenu"/><br/>Augmentium<br/>Advisors</div>
 <div class="centerMenuItem"/>
-<div class="rightMenuItem" v-on:click="toggle">
-<div class="container">
+<div class="rightMenuItem">
+<div class="container" v-on:click="toggle">
 <div class="bar1"></div>
 <div class="bar2"></div>
 <div class="bar3"></div>
@@ -11,7 +11,9 @@
 </div>
 
 <div class="sidebar" v-if="sidebarToggle">
-<menuItem />
+<menuItem 
+  onclick="toggle"
+/>
 </div>
 </div>
 </template>
@@ -33,7 +35,7 @@ export default {
 	toggle: function (event) {
 	  console.log(event.target.className)
 	  this.sidebarToggle = !this.sidebarToggle;
-	  event.target.classList.toggle("change");
+	  event.currentTarget.classList.toggle("change");
 	}
   }
 }
@@ -53,34 +55,20 @@ export default {
   display: flex;
   flex-direction: row;
 }
-/* .navlist{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height:100%;
-  overflow-x: scroll;
-  width:90%;
-} */
 .nav-items {
     float: left;
-    /* height:100%; */
-    /* height: 80px; */
     padding:15px 20px;
     margin:0px 10px;
     font-size: .8em;
 }
 .nav-image {
-  /* width:100%; */
   height: 60px;
-  /* -webkit-filter : hue-rotate(180deg); */
     filter : hue-rotate(359deg) saturate(67%) brightness(41%);;
 }
 .nav-items a {
     display: block;
     color: black;
     text-align: center;
-    /* padding: 16px; */
     text-decoration: none;
 }
 .actives{

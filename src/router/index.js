@@ -14,7 +14,7 @@ const data = {
       'Contact Us': [
         {
           heading: 'Contact  Us',
-          content: '11,  Short  Street  1st  Floor, \n  Flat  No.3 \n Kolkata  -  700  016. \n  India.  \n Tel:  +91  33  40041691 '
+          content: '11,  Short  Street  1st  Floor, \nFlat  No.3 \nKolkata  -  700  016. \nIndia.  \nTel:  +91  33  40041691 '
         },
         {
           heading: 'Email',
@@ -40,8 +40,8 @@ const data = {
           content: 'Dasaratharaman  has  over  28  years  of  contribution  in  Sales,  Marketing  and  Business  Leadership  in  the  FMCG,  Food  and  Retail  sectors  including  many  startups.In  the  FMCG  sector,  he  has  worked  with  ITC  for  16  years  and  5  years  at  Heinz  spanning  various  roles  in  sales,  logistics  and  marketing.  He  rose  to  become  the  Head  of  Marketing  for  the  ITC  tobacco  business  and  was  the  Sales  Director  at  Heinz  in  charge  of  Domestic  sales,  CSD,  Bulk  Ghee,  Food  service,  Exports,  Supply  chain  and  the  Heinz  businesses  in  Sri  Lanka,  Bangladesh  and  Nepal.  While  at  ITC,  he  optimised  the  Supply  chain  using  linear  programming  models,  created  the  first  structured  sales  training  workshops,  launched  many  successful  brands  and  developed  a  Portfolio  model  based  on  consumer  insights.  He  was  also  responsible  for  the  sponsorship  of  the  Wills  Indian  (cricket)  Team  and  developed  a  Brand  spend  optimisation  model.  While  at  Heinz  he  crafted  the  turnaround  in  the  Sales  &  Distribution  function  and  set  global  benchmarks,  which  won  him  the  coveted  Chairman’s  Award  in  2006.While  at  Sify,  he  headed  the  start-up  of  the  Digital  encryption  business  partnering  VeriSign  and  commenced  the  Carlsberg  business  in  India  as  MD  by  acquiring  a  brewery,  setting  up  another  and  launching  the  main  brands  besides  putting  together  the  management  team.  At  Spencer  Retail,  as  President  for  the  last  5  years,  he  has  headed  the  specialty  retail  businesses  of  Music  World,  Au  Bon  Pain  chain  of  cafes  and  BHPC  casual  apparel.  His  contributions  have  included  creating  the  business  models,  strategic  resourcing,  team  building  and  partner  management.    He  has  developed  both  strategic  and  operational  insights  into  several  businesses  and  honed  his  leadership  skills  through  these  experiences.  He  has  currently  set  out  to  be  a  Management  consultant,  educator  and  coach  and  is  a  visiting  faculty  at  leading  management  institutes.  He  has  served  on  several  industry  bodies  such  as  the  CII  and  ASCI.    He  is  on  the  boards  of  Praxis  business  school  and  peopleassess.com.  Dasaratharaman  is  a  Mechanical  engineer  from  IIT  Madras  and  a  PGDM  from  IIM  Ahmedabad  and  an  alumnus  of  the  Kellogg  School  Executive  programs. '
         },
         {
-          subHeading: 'E-mail',
-          content: 'dasaratharaman@augmentium.net'
+          subHeading: 'E-mail: dasaratharaman@augmentium.net',
+          content: ''
         }
       ],
       'Sameer  Nandwani (Partner)': [
@@ -64,8 +64,8 @@ const data = {
           content: 'Sameer’s  experience  covers  a  wide  ranging  number  of  industries  from  cement,  plantations,  manufacturing,  engineering,  sports,  gaming  and  entertainment.  Sameer  is  also  a  key  member  of  the  gaming  industry  promoting  “Legalization  of  Sports  Betting”within  India  and  has  advised  a  number  of  companies  both  domestic  and  international  in  this  sector '
         },
         {
-          subHeading: 'E-mail',
-          content: 'sameer@augmentium.net'
+          subHeading: 'E-mail: sameer@augmentium.net',
+          content: ''
         }
       ],
       'Robinder  Sodhi \n (Principal Consultant)': [
@@ -74,8 +74,8 @@ const data = {
           content: 'Robinder  is  a  well  qualified  and  seasoned  banking  professional  with  appx  25  years’experience  spanning  Wholesale/Corporate  Banking,  Banking  Operations  and  Consumer  Bank  with  HSBC  and  ABN/RBS  in  5  different  cities  in  India  ie  Calcutta,  Mumbai,  Chennai,  Delhi  and  Bangalore.  He  has  been  a  strong  performer  in  his  various  roles  and  has  built  a  credible  reputation  among  colleagues,  peers  and  clients.  Along  with  a  good  understanding  of  financial  markets  he  has  developed  some  trusted  client  relationships.  As  part  of  RBS  India  Bank  Management  Team  and  ALCO  he  has  also  been  actively  involved  in  the  Bank’s  strategic  planning  and  decision  making.  He  has  been  a  top  performer  with  track  record  of  exceeding  set  goals  and  expectations  and  has  successfully  managed  various  geographies  and  client  segments  within  the  Wholesale/Corporate  Bank.    The  experience  of  working  in  each  of  the  5  major  banking  markets  in  India  has  given  him  unique  exposure  to  dynamics  of  different  markets  and  industry  segments.  He  has  initiated/developed  banking  relationships  with  some  key  counterparties  which  have  over  time  yielded  repeat  mandates  for  the  Bank.  Given  his  length  of  experience,  he  has  seen  several  economic  cycles  and  the  impact  of  these  on  client  needs  and  resultant  opportunities,  while  keeping  the  Bank  protected  from  heightened  risk.  He  was  nominated  in  2007  to  ABN  AMRO’s  Global  High  Potentials  Programme  as  part  of  which  attended  a  series  of  workshops  and  Masterclasses  in  Hong  Kong  and  London.  Leadership,  People  Management  and  high  quality  Client  Engagement  have  regularly  been  cited  as  strengths  in  feedback  from  line  management  and  clients.  Robinder  led  his  team  to  ‘Team  of  the  Year’  recognition  in  successive  years  in  the  Bank.  In  his  previous  roles,  with  HSBC  and  ABN  AMRO/RBS,  he  was  responsible  for  Coverage  of  large  domestic  and  MNC  clients.  Some  key  transactions  he  worked  on  included  Aircraft  financing  for  the  national  carrier  and  ECA  financing  for  a  large  manufacturing  company.  He  was  also  responsible  for  a  breakthrough  transaction  with  one  of  India’s  largest  corporate  houses.  Robinder’s  earliest  years  were  in  Operations/branch  management  where  he  led  a  team  of  25,  managing  one  of  HSBC’s  most  high  profile  branches  in  Calcutta.  A  notable  achievement  at  the  time  was  the  successful  transition  to  an  entirely  new  operating  system  with  minimal  customer  disruption.    In  other  experience,  Robinder  ran  a  sole  road-show  in  Geneva  and  Zurich  to  ABN  AMRO  Switzerland’s  corporate  clients  showcasing  India  as  an  investment  destination  and  the  Bank  as  a  trusted  partner.  Over  the  years  he  has  called  on  Regional/Global  treasuries  of  MNC  clients  in  Germany,  Singapore,  and  Hong  Kong  to  market  for  business  in  India.  He  has  participated  in  and  benefitted  from  numerous  training  programmes  including  on  Leadership  conducted  by  London  Business  School  Training,  Hong  Kong.'
         },
         {
-          subHeading: 'E-mail',
-          content: 'robinder@augmentium.net'
+          subHeading: 'E-mail: robinder@augmentium.net',
+          content: ''
         }
       ]
     },
