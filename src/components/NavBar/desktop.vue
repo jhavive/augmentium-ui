@@ -29,7 +29,7 @@ export default {
   background: #F5F5F5;
   box-shadow: 2px 10px 50px 5px grey;
   z-index: 1000;
-  overflow: scroll;
+  /* overflow: scroll; */
   display: flex;
   flex-direction: row;
 }
