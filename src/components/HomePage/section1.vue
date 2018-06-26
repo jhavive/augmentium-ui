@@ -38,7 +38,7 @@ export default {
         width:100%;
         height: 100%;
     }
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 749px) {
         #menu-container{
             position:absolute;
             width: 75vw;
@@ -84,7 +84,52 @@ export default {
         .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
         .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }
     }
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: 750px) and (max-width: 1024px) {
+        #menu-container{
+            position:absolute;
+            width: 42vw;
+            height: 42vw;
+            top: 50%;
+            transform: translateY(-50%);
+            left:0;
+            right:0;
+            background: white;
+            border-radius:50%;
+            margin:0px auto;
+            opacity: 0.8;
+        }.circle-container {
+            position:absolute;
+            top: 45%;
+            transform: translateY(-40%);
+            left:0;
+            right:0;
+            margin:0px auto;
+        }.circle-container a {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left:0;
+            right:0;
+            margin: 0px auto;
+            text-decoration: none;
+            width: 8%; height: auto;
+            font-size: .8em;
+            color: #000000;
+            /* color: #41A5FF; */
+        }
+        .menu-image {
+            filter: hue-rotate(359deg) saturate(67%) brightness(41%);
+            width:90%;
+        }
+        .deg0 { transform: translate(185%); } /* 12em = half the width of the wrapper */
+        .deg45 { transform: rotate(55deg) translate(185%) rotate(-55deg); }
+        .deg135 { transform: rotate(125deg) translate(185%) rotate(-125deg); }
+        .deg180 { transform: translate(-185%); }
+        .deg225 { transform: rotate(235deg) translate(185%) rotate(-235deg); }
+        .deg315 { transform: rotate(305deg) translate(185%) rotate(-305deg); }
+    }
+    @media only screen and (min-width: 1025px) {
         #menu-container{
             position:absolute;
             width: 42vw;

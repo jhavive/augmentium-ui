@@ -75,9 +75,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .body{
-        position:relative;
+        position:fixed;
         width:100%;
         height: 100%;
+        top:0;
+        z-index: 0;
         /* background:; */
     }
     /* .bg{
@@ -88,7 +90,7 @@ export default {
     } */
     @media only screen and (min-width: 1024px) {
         .lower-container{
-            width: 80%;
+            width:100%;
             margin: 70px auto;
         }
         .upper-content{
@@ -103,11 +105,35 @@ export default {
             width: 100%;
             margin: 30px auto;
         }
+        
         .upper-content{
             left: 25%;
             top: 150px;
             width: 65%;
             height: 65%;
+        }
+        
+    }
+    @media only screen and (max-width: 700px) {
+        h1{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 14px;
+        }
+        p{
+            font-size: 12px;
+            line-height: 18px !important;
+        }
+        li{
+            font-size: 11px;
+            line-height: 14px !important;
+        }
+        .lower-container > *{
+            font-size: 10px;
+        }
+        .upper-container > *{
+            font-size: 12px !important;
         }
     }
     .lower-container{

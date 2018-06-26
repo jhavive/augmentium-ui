@@ -1,9 +1,12 @@
 <template>
   <div v-bind:id="($route.path==='/')?'app':'app-inside'">
     <!-- <img src="./assets/logo.png"> -->
-    <desktopNavBar class="desktop"/>
-    <mobileNav class="mobile"/>
-    <router-view/>
+    <router-view class="content"/>
+    <div v-if="$route.path!=='/'">
+      <desktopNavBar class="desktop"/>
+      <mobileNav class="mobile"/>
+    </div>
+    
   </div>
 </template>
 
@@ -24,6 +27,11 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.content {
+  z-index: 50;
+  overflow: scroll;
+}
 
 #app-inside{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -56,10 +64,11 @@ export default {
   width:100%;
   height:100%;
   overflow: scroll;
+  position: fixed;
 }
 #app:before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0; right: 0;
   top: 0; bottom: 0;
   /* background: rgba(0,0,0,.4); */
@@ -67,7 +76,13 @@ export default {
   background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0, 0, 0, 0.9)),url(assets/images/topography.png);
   /* background-color: black; */
   opacity: .6;
-  background-blend-mode:difference
+  background-blend-mode:difference;
+
+   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 #app-inside:before {
   content: "";
@@ -80,11 +95,43 @@ export default {
 @media only screen and (max-width: 1024px) {
   .desktop {
     display:none !important;
+    z-index:100;
   }
 }
 @media only screen and (min-width: 1024px) {
   .mobile {
     display:none !important;
+    z-index:100;
   }
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .6; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .6; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .6; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .6; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .6; }
 }
 </style>

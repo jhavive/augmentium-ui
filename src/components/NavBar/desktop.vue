@@ -33,19 +33,8 @@ export default {
   display: flex;
   flex-direction: row;
 }
-/* .navlist{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height:100%;
-  overflow-x: scroll;
-  width:90%;
-} */
 .nav-items {
     float: left;
-    /* height:100%; */
-    /* height: 80px; */
     padding:15px 20px;
     margin:0px 10px;
     font-size: .8em;

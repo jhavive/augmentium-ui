@@ -99,4 +99,12 @@ export default {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 700px) {
+    .nav-items{
+        padding: 15px 7px;
+    }
+  .nav-image{
+    height: 40px;
+  }
+}
 </style>

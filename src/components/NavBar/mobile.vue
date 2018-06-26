@@ -1,21 +1,26 @@
 <template>
-<div v-if="$route.path!=='/'" id="navigation">
-<div class="leftMenuItem"><img src="../../assets/images/logo.png" id="logoimgMenu"/><br/>Augmentium<br/>Advisors</div>
-<div class="centerMenuItem"/>
-<div class="rightMenuItem">
-<div class="container" v-on:click="toggle">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-</div>
-</div>
+  <div style="display:fixed;height:100%;width:100%;">
 
-<div class="sidebar" v-if="sidebarToggle">
-<menuItem 
-  onclick="toggle"
-/>
-</div>
-</div>
+    <div v-if="$route.path!=='/'" id="navigation"></div>
+
+    <div style="display: flex;flex-direction: row;overflow-y: scroll;">
+      <div class="leftMenuItem"><img src="../../assets/images/logo.png" id="logoimgMenu"/><br/>Augmentium<br/>Advisors</div>
+      <div class="centerMenuItem"/>
+      <div class="rightMenuItem">
+        <div class="container" v-on:click="toggle">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar" v-if="sidebarToggle">
+      <menuItem 
+        onclick="toggle"
+      />
+    </div>
+  </div>
+    
 </template>
 
 <script>
@@ -46,11 +51,11 @@ export default {
 #navigation{
   position: fixed;
   top:0px;
-  height:100px;
+  height:110px;
   width: 100%;
   background: #F5F5F5;
   box-shadow: 2px 10px 50px 5px grey;
-  z-index: 1000;
+  z-index: 0;
   overflow: scroll;
   display: flex;
   flex-direction: row;
@@ -83,7 +88,10 @@ export default {
   width: 10%;
   padding: 20px;
   text-align: center;
-  font-size: 10px
+  font-size: 10px;
+  height:100px;
+  width:100px;
+  z-index: 100;
 }
 .centerMenuItem {
 	width: 80%;
@@ -92,11 +100,10 @@ export default {
   width: 80px;
   padding: 20px;
   text-align: right;
+  z-index: 100;
+  /* overflow-y: scroll; */
 }
-#logoimgMenu {
-  width: 45px;
-  height: 50%;
-}
+
 
 .container {
     display: inline-block;
@@ -122,9 +129,35 @@ export default {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-.sidebar {
-  	position: fixed;
-  	top: 100px;
+
+@media only screen and (max-width: 700px) {
+  #logoimgMenu {
+    width: 40px;
+    height: 30%;
+  }
+  .nav-image{
+    height: 30px;
+  }
+  .sidebar {
+  	position: absolute;
+  	top: 110px;
+    right: 0px;
+    bottom: 0px;
+    background: #F5F5F5;
+    /* height: 100%; */
+    width: 81px;
+    box-shadow: 0px 38px 50px 5px grey;
+    overflow-y: scroll;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1025px) {
+  #logoimgMenu {
+    width: 70px;
+    height: 50%;
+  }
+  .sidebar {
+  	position: absolute;
+  	top: 110px;
     right: 0px;
     bottom: 0px;
     background: #F5F5F5;
@@ -132,5 +165,6 @@ export default {
     width: 125px;
     box-shadow: 0px 38px 50px 5px grey;
     overflow-y: scroll;
+  }
 }
 </style>

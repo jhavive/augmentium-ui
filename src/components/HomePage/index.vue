@@ -4,11 +4,166 @@
     <div class="content">
         <!-- <div v-bind:class="(!secondTime)?'logo':'logostatic'"> -->
             <!-- <div class="upper-part-logo"></div> -->
-            <div id="rect" v-bind:class="(!secondTime)?'moveUp':''" class=""></div>
-            <div id="logo-border" v-bind:class="(!secondTime)?'moveDown':''" ><img src="../../assets/images/logo.png" id="logoimg"  v-bind:class="(!secondTime)?'fadeIn':''" /></div>
+            <!-- <div id="rect" v-bind:class="(!secondTime)?'moveUp':''" class=""></div>
+            <div id="logo-border" v-bind:class="(!secondTime)?'moveDownWithDelay':''" ><img src="../../assets/images/logo.png" id="logoimg"  v-bind:class="(!secondTime)?'fadeIn':''" /></div>
             <h1 id="name"  v-bind:class="(!secondTime)?'fadeIn':''" >AUGMENTIUM</h1>
-            <div id="advisor"  v-bind:class="(!secondTime)?'moveUp':''" ><h3 v-bind:class="(!secondTime)?'fadeIn':''" >Advisors</h3></div>
-            <div id="rect"  v-bind:class="(!secondTime)?'moveDown':''"></div>
+            <div id="advisor"  v-bind:class="(!secondTime)?'moveUpWithDelay':''" ><h3 id="" v-bind:class="(!secondTime)?'fadeIn':''" >Advisors</h3></div>
+            <div id="rect"  v-bind:class="(!secondTime)?'moveDown':''"></div> -->
+            <svg id="svg">
+                <rect width="80%" id="top-bar" height="1.5%" x="10%"  y="35%" style="fill:rgb(255,255,255);" />
+                <rect width="2%" id="left-top-bar" height="17%" x="10%" style="fill:rgb(255,255,255);" />
+                <rect width="2%" id="right-top-bar"  height="17%" x="90%" style="fill:rgb(255,255,255);" />
+
+                <!-- <defs>
+                    <clipPath id="circleView">
+                        <circle cx="20%" cy="20%" r="50%" fill="#FFFFFF" />            
+                    </clipPath>
+                </defs> -->
+                <g id="content">
+                    <image width="25%" id="img" height="25%" x="36%" y="8%" xlink:href="../../assets/images/logo.png" />
+                
+                    <text y="40%" fill="WHITE"  id="logo-text">AUGMENTIUM</text>
+                    <!-- <text y="40%" fill="WHITE" style="font-weight:800;font-size:5.5vw">AUGMENTIUM</text> -->
+                    
+                    <text x="28%" y="57%" id="logo-sub-text" fill="WHITE">ADVISORS</text>
+                </g>
+
+                <rect width="80%"  id="bottom-bar"  height="1.5%" x="10%"  y="36%"  style="fill:rgb(255,255,255);" />
+                 <!-- y="70%" -->
+                <rect width="2%" id="left-bottom-bar" height="17%" x="10%" y="65%" style="fill:rgb(255,255,255);" />
+                <rect width="2%" id="right-bottom-bar" height="17%" x="90%" y="65%" style="fill:rgb(255,255,255);" />
+
+                <animate 
+                xlink:href="#top-bar"
+                attributeName="opacity" 
+                from="0"
+                to="1" 
+                dur="1s"
+                fill="freeze" 
+                begin="0s"
+                id="fadeInTop" />
+
+                <animate 
+                xlink:href="#bottom-bar"
+                attributeName="opacity" 
+                from="0"
+                to="1" 
+                dur="1s"
+                fill="freeze"  
+                begin="0s"
+                id="fadeInBottom" />
+
+                <animate 
+                xlink:href="#top-bar"
+                attributeName="y" 
+                from="35%"
+                to="10%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="rect-anim" />
+
+                <animate 
+                xlink:href="#bottom-bar"
+                attributeName="y" 
+                from="36%"
+                to="62.5%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="rect-anim" />
+
+                <animate 
+                xlink:href="#right-top-bar"
+                attributeName="y" 
+                from="0%"
+                to="10%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="right-top-bar-anim" />
+
+                <animate 
+                xlink:href="#left-top-bar"
+                attributeName="y" 
+                from="0%"
+                to="10%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="left-top-bar-anim" />
+
+                <animate 
+                xlink:href="#right-bottom-bar"
+                attributeName="y" 
+                from="65%"
+                to="47%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="right-bottom-bar-anim" />
+
+                <animate 
+                xlink:href="#left-bottom-bar"
+                attributeName="y" 
+                from="65%"
+                to="47%" 
+                dur="2s"
+                begin="fadeInBottom.end + 1s"
+                fill="freeze" 
+                id="left-bottom-bar-anim" />
+
+                <animate 
+                    xlink:href="#content"
+                    attributeName="opacity" 
+                    from="0"
+                    to="0" 
+                    dur="6s"
+                    begin="0s"
+                    id="centralBlank" />
+
+                <animate 
+                    xlink:href="#content"
+                    attributeName="opacity" 
+                    from="0"
+                    to="1" 
+                    dur="2s"
+                    begin="centralBlank.end"
+                    fill="freeze" 
+                    id="centralFadeIn" />
+
+                <!-- <animate 
+                    xlink:href="#img"
+                    attributeName="opacity" 
+                    from="0"
+                    to="1" 
+                    dur="2s"
+                    begin="left-bottom-bar-anim.end + 1s"
+                    fill="freeze" 
+                    id="centralFadeIn" />
+
+                <animate 
+                    xlink:href="#logo-text"
+                    attributeName="opacity" 
+                    from="0"
+                    to="1" 
+                    dur="2s"
+                    begin="left-bottom-bar-anim.end + 1s"
+                    fill="freeze" 
+                    id="centralFadeIn" />
+            
+                <animate 
+                    xlink:href="#logo-sub-text"
+                    attributeName="opacity" 
+                    from="0"
+                    to="1" 
+                    dur="2s"
+                    begin="left-bottom-bar-anim.end + 1s"
+                    fill="freeze" 
+                    id="centralFadeIn" /> -->
+            
+
+            </svg>
         <!-- </div> -->
     </div>
     <div class="scroll-down">
@@ -88,9 +243,7 @@ export default {
         margin: 0px
     }
     h3{
-        margin: 7px;
-        color:white;
-        font-size: 2rem;
+        margin: .1vw;
     }
     ul {
         list-style-type: none;
@@ -115,9 +268,32 @@ export default {
     .content{
         width:100%;
         position: absolute;
-        top:35%;
+        top:20%;
     }
     @media only screen and (max-width: 750px) {
+        @keyframes moveUp {
+            0%{
+                transform:translateY(52px)
+            }
+            50% {
+                transform:translateY(52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+
+        @keyframes moveDown {
+            0% {
+                transform:translateY(-52px)
+            }
+            50% {
+                transform:translateY(-52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
         #logoimg{
             margin-top:5px;
             width:30%;
@@ -127,12 +303,57 @@ export default {
             border-right: .5vw solid white;
             margin: 0px auto;
             width: 20vw;
-            font-size: 2vw;
-            padding: 10px 0px;
+            font-size: 3vw;
+            padding: 1vw 0px;
+            color: white;
+        }
+        #svg{
+            width:40vw;
+            height:60vw;
+        }
+        #img{
+            /* opacity: 0; */
+        }
+        #logo-text {
+            /* opacity: 0; */
+            font-size: 5.7vw;
+            font-weight:800;
+        } 
+        #logo-sub-text {
+            /* opacity: 0; */
+            font-weight:600;
+            font-size:3.5vw;
         }
     }
     @media only screen and (min-width: 750px) {
+        @keyframes moveUp {
+            0%{
+                transform:translateY(120px)
+            }
+            50% {
+                transform:translateY(120px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+
+        @keyframes moveDown {
+            0% {
+                transform:translateY(-100px)
+            }
+            50% {
+                transform:translateY(-100px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
         
+        #svg{
+            width:20vw;
+            height:30vw;
+        }
         #logoimg{
             margin-top:10px;
             width:30%;
@@ -144,7 +365,21 @@ export default {
             margin: 0px auto;
             width: 20vw;
             font-size: 3vw;
-            padding: 10px 0px;
+            padding: 1vw 0px;            
+            color: white;
+        }
+        #img{
+            /* opacity: 0; */
+        }
+        #logo-text {
+            /* opacity: 0; */
+            font-weight:800;
+            font-size:2.8vw;
+        }
+        #logo-sub-text {
+            /* opacity: 0; */
+            font-weight:600;
+            font-size:1.7vw;
         }
     }
     #rect {
@@ -161,8 +396,18 @@ export default {
         animation: moveDown;
         animation-duration: 3s;
     }
+    .moveUpWithDelay {
+        animation: moveUp;
+        animation-duration: 6s;
+
+    }
+    .moveDownWithDelay {
+        animation: moveDown;
+        animation-duration: 6s;
+        /* animation-delay: 3s; */
+    }
     .fadeIn {
-        animation: fadeinWithDelay 6s;
+        animation: fadeinWithDelay 10s;
     }
     #logo-border {
         margin: 0px auto;
