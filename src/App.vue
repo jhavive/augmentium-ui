@@ -42,9 +42,11 @@ export default {
   /* margin-top: 60px; */
   margin:0px;
   background:none;
-  background: url('assets/images/bg1.jpg');
+  background: url('assets/images/bg.jpg');
   background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   width:100%;
   height:100%;
   overflow: scroll;
@@ -58,8 +60,10 @@ export default {
   /* margin-top: 60px; */
   margin:0px;
   background:none;
-  background: url('assets/images/bg1.jpg');
+  background: url('assets/images/bg.jpg');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
   width:100%;
   height:100%;

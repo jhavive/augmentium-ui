@@ -268,7 +268,7 @@ export default {
     .content{
         width:100%;
         position: absolute;
-        top:20%;
+        top:15%;
     }
     @media only screen and (max-width: 750px) {
         @keyframes moveUp {
@@ -427,7 +427,7 @@ export default {
 
     .scroll-down {
         position: absolute;
-        bottom: 20px;
+        bottom: 150px;
         text-align: center;
         width: 100%;
     }
