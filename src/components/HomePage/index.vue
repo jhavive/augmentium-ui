@@ -9,30 +9,31 @@
             <h1 id="name"  v-bind:class="(!secondTime)?'fadeIn':''" >AUGMENTIUM</h1>
             <div id="advisor"  v-bind:class="(!secondTime)?'moveUpWithDelay':''" ><h3 id="" v-bind:class="(!secondTime)?'fadeIn':''" >Advisors</h3></div>
             <div id="rect"  v-bind:class="(!secondTime)?'moveDown':''"></div> -->
-            <svg id="svg">
-                <rect width="80%" id="top-bar" height="1.5%" x="10%"  y="35%" style="fill:rgb(255,255,255);" />
-                <rect width="2%" id="left-top-bar" height="17%" x="10%" style="fill:rgb(255,255,255);" />
-                <rect width="2%" id="right-top-bar"  height="17%" x="90%" style="fill:rgb(255,255,255);" />
+            <svg id="svg1" style="opacity: 0;">
+                <g id="logo">
+                    <rect width="80%" id="top-bar" height="1.5%" x="10%"  y="35%" style="fill:rgb(255,255,255);" />
+                    <rect width="2%" id="left-top-bar" height="17%" x="10%" style="fill:rgb(255,255,255);" />
+                    <rect width="2%" id="right-top-bar"  height="17%" x="90%" style="fill:rgb(255,255,255);" />
 
-                <!-- <defs>
-                    <clipPath id="circleView">
-                        <circle cx="20%" cy="20%" r="50%" fill="#FFFFFF" />            
-                    </clipPath>
-                </defs> -->
-                <g id="content">
-                    <image width="25%" id="img" height="25%" x="36%" y="8%" xlink:href="../../assets/images/logo.png" />
-                
-                    <text y="40%" fill="WHITE"  id="logo-text">AUGMENTIUM</text>
-                    <!-- <text y="40%" fill="WHITE" style="font-weight:800;font-size:5.5vw">AUGMENTIUM</text> -->
+                    <!-- <defs>
+                        <clipPath id="circleView">
+                            <circle cx="20%" cy="20%" r="50%" fill="#FFFFFF" />            
+                        </clipPath>
+                    </defs> -->
+                    <g id="content">
+                        <image width="25%" id="img" height="25%" x="36%" y="8%" xlink:href="../../assets/images/logo.png" />
                     
-                    <text x="28%" y="57%" id="logo-sub-text" fill="WHITE">ADVISORS</text>
+                        <text y="40%" fill="WHITE"  id="logo-text">AUGMENTIUM</text>
+                        <!-- <text y="40%" fill="WHITE" style="font-weight:800;font-size:5.5vw">AUGMENTIUM</text> -->
+                        
+                        <text x="28%" y="57%" id="logo-sub-text" fill="WHITE">ADVISORS</text>
+                    </g>
+
+                    <rect width="80%"  id="bottom-bar"  height="1.5%" x="10%"  y="36%"  style="fill:rgb(255,255,255);" />
+                    <!-- y="70%" -->
+                    <rect width="2%" id="left-bottom-bar" height="17%" x="10%" y="65%" style="fill:rgb(255,255,255);" />
+                    <rect width="2%" id="right-bottom-bar" height="17%" x="90%" y="65%" style="fill:rgb(255,255,255);" />
                 </g>
-
-                <rect width="80%"  id="bottom-bar"  height="1.5%" x="10%"  y="36%"  style="fill:rgb(255,255,255);" />
-                 <!-- y="70%" -->
-                <rect width="2%" id="left-bottom-bar" height="17%" x="10%" y="65%" style="fill:rgb(255,255,255);" />
-                <rect width="2%" id="right-bottom-bar" height="17%" x="90%" y="65%" style="fill:rgb(255,255,255);" />
-
                 <animate 
                 xlink:href="#top-bar"
                 attributeName="opacity" 
@@ -186,6 +187,9 @@ export default {
   },
   created: function () {
     localStorage.setItem('secondTime', true)
+    window.addEventListener("load", function(event) {
+        document.getElementById('svg1').id = 'svg'
+    });
   },
   data () {
     return {
@@ -229,6 +233,33 @@ export default {
             opacity: 0;
         }
         50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein { 
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadein { 
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadein { 
+        0% {
             opacity: 0;
         }
         100% {
@@ -310,6 +341,18 @@ export default {
         #svg{
             width:40vw;
             height:60vw;
+            -webkit-animation-name: fadein;
+            -webkit-animation-duration: 1.25s;
+            -webkit-animation-iteration-count: 1;
+            animation-name: fadein;
+            animation-duration: 1.25s;
+            animation-iteration-count: 1;
+            -moz-animation-name: fadein;
+            -moz-animation-duration: 1.25s;
+            -moz-animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
         }
         #img{
             /* opacity: 0; */
@@ -353,6 +396,19 @@ export default {
         #svg{
             width:20vw;
             height:30vw;
+            opacity: 0;
+            -webkit-animation-name: fadein;
+            -webkit-animation-duration: 1.25s;
+            -webkit-animation-iteration-count: 1;
+            animation-name: fadein;
+            animation-duration: 1.25s;
+            animation-iteration-count: 1;
+            -moz-animation-name: fadein;
+            -moz-animation-duration: 1.25s;
+            -moz-animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
         }
         #logoimg{
             margin-top:10px;

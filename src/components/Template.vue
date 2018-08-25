@@ -22,7 +22,9 @@
             <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
                 <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
                 <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
+                <div v-if="c.subSubHeading" class="upper-container-content-subSubHeading">{{c.subSubHeading}}</div>
                 <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
+                <p v-if="c.subContent" class="upper-container-content-subContent">{{c.subContent}}</p>
                 <ul v-if="c.list" class="upper-container-content-content-list">
                     <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
                 </ul>
@@ -88,6 +90,9 @@ export default {
         background-color: black;
         opacity: 0.4;
     } */
+    .content {
+        overflow-y: scroll;
+    }
     @media only screen and (min-width: 1024px) {
         .lower-container{
             width:100%;
@@ -120,6 +125,11 @@ export default {
         }
         h2{
             font-size: 14px;
+        }
+        h4{
+            margin:0px;
+            -webkit-margin-before: 0px !important;
+            -webkit-margin-after: 0px !important;
         }
         p{
             font-size: 12px;
@@ -213,5 +223,14 @@ export default {
         /* width: 52px; */
         height: 60px;
         margin-left: 10px
+    }
+    .upper-container-content-subSubHeading {
+        margin:0px !important;
+        font-size: 12px;
+        font-weight: 800;
+    }
+    .upper-container-content-subContent {
+        font-size: 10px !important;
+        color: #00000080
     }
 </style>

@@ -19,14 +19,22 @@ const data = {
         {
           heading: 'Email',
           content: 'contactus@augmentium.net'
-        }
+        },
+        {
+          subSubHeading: 'Artistic Design',
+          subContent: 'Mehek Nandwani'
+        },
+        {
+          subSubHeading: 'Website Design',
+          subContent: 'Vivek Jha - jhavive@gmail.com'
+        },
       ],
       'Disclaimer': [
         {
           heading: 'Disclaimer',
           content: 'The  content  of  this  website  is  the  absolute  property  of  Augmentium.  Copying  any  information  or  using  the  information  for  any  other  purpose  would  entail  viewer’s  violation  of  copyright  law.  The  purpose  of  this  website  is  to  extend  maximum  possible  information  to  the  viewers.  However,  if  any  information  is  found  to  be  inadequate  and  /  or  incorrect,  please  bring  that  to  the  knowledge  of  us  and  we  shall  correct  that  without  delay.  Error,  if  any,  is  unintentional  and  should  not  be  challenged,  rather  assist  us  to  rectify  the  same.  The  disclaimer  of  this  website  is  liable  to  be  changed  from  time  to  time.'
         }
-      ]
+      ],
     },
     menuItems: ['Contact Us', 'Disclaimer']
   },
@@ -77,9 +85,35 @@ const data = {
           subHeading: 'E-mail: robinder@augmentium.net',
           content: ''
         }
+      ],
+      'Ravi Subramanian \n (Infrastructural Finance Consultant)': [
+        {
+          heading: 'Robinder  Sodhi (Principal  Consultant)',
+          content: 'Ravi Subramanian has about 30 years experience in the corporate finance advisory market in India. Prior to setting up his own infrastructure advisory practice in 2003, he had worked with Rothschild India and Peregrine India, as head of their India transport  advisory business. Earlier, he worked across treasury, leasing and capital markets with SBI Capital Markets Limited in the early 1990s. Over the past two decades, he is focused on the financial and commercial advisory work pertaining to large infrastructure projects, especially those under a Public Private Partnership (PPP) Model.  He was involved with early road PPPs in the mid 1990s and went on to work in more than 50 projects, having seen full cycle of concessions and evolution of various bidding models. He has worked on three airports across India doing fund raising, privatisation advisory and tariff/regulatory assessments/business plan preparation, once again witnessing regulatory evolution and greenfield/brownfield models. Several thermal plants, power transmission concessions and fund raising for renewable energy also form part of the experience. In ports, his experience spans across solid, container and liquid terminals, including assisting clients right from pre-bid stage to financial closure achievement. While the bulk of the advisory work has been to Indian and multinational companies, Government entities have also been amongst his clients, thus lending a perspective of both sides of the table. Sectors currently covered include Airports, Railways, Ports, Highways, Metro rail, water, waste water treatment, desalination, renewable and thermal power, transmission etc. Specific assistance can be provided, inter alia, to international firms in the following aspects'
+        },
+        {
+          subHeading: '',
+          list: [
+            'India Sector entry strategies',
+            'Identification of Indian companies to engage with in the above sectors – varying from outright acquisition to different levels of collaboration, including those limited to specific opportunities ',
+            'Evaluating bid opportunities in privatisation/PPPs, analyse the underlying concessions and recommend projects to focus on',
+            'Financial models development covering concession/lender and indian taxation/accounting norms ',
+            'Bid advisory support including right up to quantification of the bidding variable',
+            'Decoding financial/economic regulation of sectors ',
+            'Local fund raising for debt and equity from infra financiers',
+            ]
+        },
+        {
+          subHeading: '',
+          content: 'Ravi completed his PGDM from IIM Calcutta in 1988. He is well connected to several corporates as well as an extensive eco-system of dependable specialists and consultants in various domains and sectors.'
+        },
+        // {
+        //   subHeading: 'E-mail: robinder@augmentium.net',
+        //   content: ''
+        // }
       ]
     },
-    menuItems: ['Kannan  Dasaratharaman (Partner)', 'Sameer  Nandwani (Partner)', 'Robinder  Sodhi \n (Principal Consultant)']
+    menuItems: ['Kannan  Dasaratharaman (Partner)', 'Sameer  Nandwani (Partner)', 'Robinder  Sodhi \n (Principal Consultant)', 'Ravi Subramanian \n (Infrastructural Finance Consultant)']
   },
   about: {
     imagePath: "About.png",
@@ -268,6 +302,70 @@ const data = {
       'Management  Information  Systems',
       'M&A  Advisory  Services'
     ]
+  },
+  client: {
+    imagePath: "Investments.png",
+    heading: 'Clients',
+    content: {
+      'CORPORATE ADVISORY': [ 
+        {
+          subHeading: 'Sportech Plc',
+          content: 'A global based sports betting and gaming company . The company entered into India as the first major international company of its kind in gaming sector to enter India and formed a JV with a leading Indian conglomerate . Advice was provided on the India entry strategy, selection of the JV partner, overseeing of the Indian operations on behalf of the company.'
+        },
+        {
+          subHeading: 'Ambootia Group',
+          content: 'A leading organic tea group within India who have been guided on multiple aspects such as international JV’s, restructuring , MIS and corporate strategy'
+        },
+        {
+          subHeading: 'Nicco Park',
+          content: 'The leading theme park within India were aided on international and domestic collaborations and advisory services on their internal operations'
+        },
+      ],
+      'M&amp;A AND RESTRUCTURING': [
+        {
+          subHeading: 'International Combustion Ltd',
+          content: 'A leading engineering company within India who were advised on valuation and strategy with respect to a vertical within the company'
+        },
+        {
+          subHeading: 'Nicco Corporation',
+          content: 'Well established Engineering Company- Formulated the restructuring plan for the company for approval by the Company’s Bank Lending Consortium '
+        }
+      ],
+      'MARKETING AND SALES ADVISORY': [
+        {
+          subHeading: 'Tata Motors',
+          content: 'One of Tata’s Group flagship companies- Provided retail, selling and distribution strategy at the company’s Marketing Conclaves as well being Key Note Speakers at the Dealers Conferences'
+        },
+        {
+          subHeading: 'Tanishq',
+          content: 'The leading Retail Jewellery Venture from the House of Tata’s- Provided detailed guidance and methodology  on the staff incentive schemes at the retail level'
+        },
+        {
+          subHeadings: 'Tata Steel',
+          content: 'One of  Tata’s Group foremost companies- extensive marketing advisory sessions combined with coaching interventions for the Finance team of the company'
+        },
+        {
+          subHeading: 'Toyata and Hyundai',
+          content: 'Held guidance sessions for the company’s dealers on Customer Centricity and Satisfaction'
+        },
+        {
+          subHeading: 'Spencers',
+          content: 'The retails venture of the Sanjiv Goenka Group- Holding series programmes of retailing workshops for the store level teams'
+        },
+        
+      ],
+      'LEADERSHIP AND CORPORATE MENTORING': [
+        {
+          subHeading: 'Aditya Birla Group',
+          content: 'Leading Corporate House-Executive coaching across the group’s companies, Hindalco, Idea and others'
+        },
+        {
+          subHeading: 'RS Software',
+          content: 'Respected IT Company- Ran Leadership Development Programmes for the Senior Management of the Company'
+        }
+      ]
+    },
+    menuItems: ['CORPORATE ADVISORY', 'M&A AND RESTRUCTURING', 'MARKETING AND SALES ADVISORY', 'LEADERSHIP AND CORPORATE MENTORING']
   }
 }
 
@@ -301,6 +399,12 @@ export default new Router({
       name: 'Team',
       component: Template,
       props: data.team
+    },
+    {
+      path: '/invetment',
+      name: 'Client',
+      component: Template,
+      props: data.client
     }
   ]
 })

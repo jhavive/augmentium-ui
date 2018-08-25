@@ -30,7 +30,7 @@ export default {
 
 .content {
   z-index: 50;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #app-inside{
@@ -49,7 +49,7 @@ export default {
   background-attachment: fixed;
   width:100%;
   height:100%;
-  overflow: scroll;
+  overflow: hidden;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -96,13 +96,13 @@ export default {
   background-color: black;
   opacity: .4;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .desktop {
     display:none !important;
     z-index:100;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1023px) {
   .mobile {
     display:none !important;
     z-index:100;

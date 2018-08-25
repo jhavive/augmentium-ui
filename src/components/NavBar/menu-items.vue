@@ -1,26 +1,33 @@
 <template>
     <ul class="navlist">
         <li v-bind:class="[$route.path==='/' ? 'actives' : '', 'nav-items']">
-            <router-link to="/" exact><div><img class="nav-image" src="../../assets/images/Home.png"/><br/>Home</div></router-link>
+            <!-- <router-link to="/" exact><div><img class="nav-image" src="../../assets/images/Home.png"/><br/>Home</div></router-link> -->
+            <a href="/"><div><img class="nav-image" src="../../assets/images/Home.png"/><br/>Home</div></a>
         </li>
         <li v-bind:class="[$route.path==='/about' ? 'actives' : '', 'nav-items']" v-on:click="(onclick)?onclick:null">
-            <router-link to='about'><div><img class="nav-image" src="../../assets/images/About.png"/><br/>About</div></router-link>
+            <!-- <router-link to='about'><div><img class="nav-image" src="../../assets/images/About.png"/><br/>About</div></router-link> -->
+            <a href='/#/about'><div><img class="nav-image" src="../../assets/images/About.png"/><br/>About</div></a>
         </li>
         <li v-bind:class="[$route.path==='/approach' ? 'actives' : '', 'nav-items']">
-            <router-link to='approach'><div><img class="nav-image" src="../../assets/images/Approach.png"/><br/>Approach</div></router-link>
+            <!-- <router-link to='approach'><div><img class="nav-image" src="../../assets/images/Approach.png"/><br/>Approach</div></router-link> -->
+            <a href='/#/approach'><div><img class="nav-image" src="../../assets/images/Approach.png"/><br/>Approach</div></a>
         </li>
         <li v-bind:class="[$route.path==='/team' ? 'actives' : '', 'nav-items']">
-            <router-link to='team'><div><img class="nav-image" src="../../assets/images/Team.png"/><br/>Team</div></router-link>
+            <!-- <router-link to='team'><div><img class="nav-image" src="../../assets/images/Team.png"/><br/>Team</div></router-link> -->
+            <a href='/#/team'><div><img class="nav-image" src="../../assets/images/Team.png"/><br/>Team</div></a>
             <!-- <router-link :to="'team'" replace><img class="nav-image" src="./assets/images/Team.png"/></router-link> -->
         </li>
         <li v-bind:class="[$route.path==='/' ? 'actives' : '', 'nav-items']">
-            <router-link to='invetment'><div><img class="nav-image" src="../../assets/images/Investments.png"/><br/>Clients</div></router-link>
+            <!-- <router-link to='invetment'><div><img class="nav-image" src="../../assets/images/Investments.png"/><br/>Clients</div></router-link> -->
+            <a href='/#/invetment'><div><img class="nav-image" src="../../assets/images/Investments.png"/><br/>Clients</div></a>
         </li>
         <li v-bind:class="[$route.path==='/news' ? 'actives' : '', 'nav-items']">
-            <router-link to='news'><div><img class="nav-image" src="../../assets/images/News.png"/><br/>News</div></router-link>
+            <!-- <router-link to='news'><div><img class="nav-image" src="../../assets/images/News.png"/><br/>News</div></router-link> -->
+            <a href='/#/news'><div><img class="nav-image" src="../../assets/images/News.png"/><br/>News</div></a>
         </li>
         <li v-bind:class="[$route.path==='/contact' ? 'actives' : '', 'nav-items']">
-            <router-link to='contact'><div><img class="nav-image" src="../../assets/images/Contact_Us.png"/><br/>Contact Us</div></router-link>
+            <!-- <router-link to='contact'><div><img class="nav-image" src="../../assets/images/Contact_Us.png"/><br/>Contact Us</div></router-link> -->
+            <a href='/#/contact'><div><img class="nav-image" src="../../assets/images/Contact_Us.png"/><br/>Contact Us</div></a>
         </li>
     </ul>
 </template>
