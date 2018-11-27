@@ -111,31 +111,141 @@ export default {
 
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: .6; }
+    from { 
+      opacity: 0; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      /* IE 5-7 */
+      filter: alpha(opacity=0);
+
+      /* Netscape */
+      -moz-opacity: 0;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0;
+    }
+    to   { 
+      opacity: 0.6; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      /* IE 5-7 */
+      filter: alpha(opacity=60);
+
+      /* Netscape */
+      -moz-opacity: 0.6;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0.6;
+    }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: .6; }
+    from { 
+      opacity: 0; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      /* IE 5-7 */
+      filter: alpha(opacity=0);
+
+      /* Netscape */
+      -moz-opacity: 0;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0;
+    }
+    to   { 
+      opacity: 0.6; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      /* IE 5-7 */
+      filter: alpha(opacity=60);
+
+      /* Netscape */
+      -moz-opacity: 0.6;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0.6;
+    }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: .6; }
+    from { 
+      opacity: 0; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      /* IE 5-7 */
+      filter: alpha(opacity=0);
+
+      /* Netscape */
+      -moz-opacity: 0;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0;
+    }
+    to   { 
+      opacity: 0.6; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      /* IE 5-7 */
+      filter: alpha(opacity=60);
+
+      /* Netscape */
+      -moz-opacity: 0.6;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0.6;
+    }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: .6; }
+    from { 
+      opacity: 0; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      /* IE 5-7 */
+      filter: alpha(opacity=0);
+
+      /* Netscape */
+      -moz-opacity: 0;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0;
+    }
+    to   { 
+      opacity: 0.6; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      /* IE 5-7 */
+      filter: alpha(opacity=60);
+
+      /* Netscape */
+      -moz-opacity: 0.6;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0.6;
+    }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: .6; }
+    from { 
+      opacity: 0; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      /* IE 5-7 */
+      filter: alpha(opacity=0);
+
+      /* Netscape */
+      -moz-opacity: 0;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0;
+    }
+    to   { 
+      opacity: 0.6; 
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      /* IE 5-7 */
+      filter: alpha(opacity=60);
+
+      /* Netscape */
+      -moz-opacity: 0.6;
+
+      /* Safari 1.x */
+      -khtml-opacity: 0.6;
+    }
 }
 </style>

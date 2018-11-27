@@ -9,7 +9,7 @@
             <h1 id="name"  v-bind:class="(!secondTime)?'fadeIn':''" >AUGMENTIUM</h1>
             <div id="advisor"  v-bind:class="(!secondTime)?'moveUpWithDelay':''" ><h3 id="" v-bind:class="(!secondTime)?'fadeIn':''" >Advisors</h3></div>
             <div id="rect"  v-bind:class="(!secondTime)?'moveDown':''"></div> -->
-            <svg id="svg1" style="opacity: 0;">
+            <svg id="svg1" style="opacity: 0;-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;">
                 <g id="logo">
                     <rect width="80%" id="top-bar" height="1.5%" x="10%"  y="35%" style="fill:rgb(255,255,255);" />
                     <rect width="2%" id="left-top-bar" height="17%" x="10%" style="fill:rgb(255,255,255);" />
@@ -188,6 +188,7 @@ export default {
   created: function () {
     localStorage.setItem('secondTime', true)
     window.addEventListener("load", function(event) {
+        console.log("Hello");
         document.getElementById('svg1').id = 'svg'
     });
   },
@@ -215,8 +216,96 @@ export default {
             transform:translateY(0px)
         }
     }
+    @-moz-keyframes moveUp {
+        0%{
+            transform:translateY(100px)
+        }
+        50% {
+            transform:translateY(100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-webkit-keyframes moveUp {
+        0%{
+            transform:translateY(100px)
+        }
+        50% {
+            transform:translateY(100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-ms-keyframes moveUp {
+        0%{
+            transform:translateY(100px)
+        }
+        50% {
+            transform:translateY(100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-o-keyframes moveUp {
+        0%{
+            transform:translateY(100px)
+        }
+        50% {
+            transform:translateY(100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
 
     @keyframes moveDown {
+        0% {
+            transform:translateY(-100px)
+        }
+        50% {
+            transform:translateY(-100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-moz-keyframes moveDown {
+        0% {
+            transform:translateY(-100px)
+        }
+        50% {
+            transform:translateY(-100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-webkit-keyframes  moveDown {
+        0% {
+            transform:translateY(-100px)
+        }
+        50% {
+            transform:translateY(-100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-ms-keyframes moveDown {
+        0% {
+            transform:translateY(-100px)
+        }
+        50% {
+            transform:translateY(-100px)
+        }
+        100% {
+            transform:translateY(0px)
+        }
+    }
+    @-o-keyframes moveDown {
         0% {
             transform:translateY(-100px)
         }
@@ -231,39 +320,326 @@ export default {
     @keyframes fadeinWithDelay { 
         0% {
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
         }
         50%{
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
         }
         100% {
             opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+    @-moz-keyframes fadeinWithDelay { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        50%{
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+    @-webkit-keyframes  fadeinWithDelay { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        50%{
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+    @-ms-keyframes fadeinWithDelay { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        50%{
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+    @-o-keyframes fadeinWithDelay { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        50%{
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
         }
     }
 
     @keyframes fadein { 
         0% {
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
         }
         100% {
             opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
         }
     }
+    
 
     @-webkit-keyframes fadein { 
         0% {
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
         }
         100% {
             opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
         }
     }
 
     @-moz-keyframes fadein { 
         0% {
             opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
         }
         100% {
             opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadein { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
+        }
+    }
+    @-o-keyframes fadein { 
+        0% {
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            /* IE 5-7 */
+            filter: alpha(opacity=0);
+
+            /* Netscape */
+            -moz-opacity: 0;
+
+            /* Safari 1.x */
+            -khtml-opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            /* IE 5-7 */
+            filter: alpha(opacity=100);
+
+            /* Netscape */
+            -moz-opacity: 1;
+
+            /* Safari 1.x */
+            -khtml-opacity: 1;
         }
     }
 
@@ -313,6 +689,50 @@ export default {
                 transform:translateY(0px)
             }
         }
+        @-moz-keyframes moveUp {
+            0%{
+                transform:translateY(52px)
+            }
+            50% {
+                transform:translateY(52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-webkit-keyframes  moveUp {
+            0%{
+                transform:translateY(52px)
+            }
+            50% {
+                transform:translateY(52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-ms-keyframes moveUp {
+            0%{
+                transform:translateY(52px)
+            }
+            50% {
+                transform:translateY(52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-o-keyframes moveUp {
+            0%{
+                transform:translateY(52px)
+            }
+            50% {
+                transform:translateY(52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
 
         @keyframes moveDown {
             0% {
@@ -325,6 +745,52 @@ export default {
                 transform:translateY(0px)
             }
         }
+        @-moz-keyframes moveDown {
+            0% {
+                transform:translateY(-52px)
+            }
+            50% {
+                transform:translateY(-52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-webkit-keyframes  moveDown {
+            0% {
+                transform:translateY(-52px)
+            }
+            50% {
+                transform:translateY(-52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-ms-keyframes moveDown {
+            0% {
+                transform:translateY(-52px)
+            }
+            50% {
+                transform:translateY(-52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-o-keyframes moveDown {
+            0% {
+                transform:translateY(-52px)
+            }
+            50% {
+                transform:translateY(-52px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+
+
         #logoimg{
             margin-top:5px;
             width:30%;
@@ -344,15 +810,18 @@ export default {
             -webkit-animation-name: fadein;
             -webkit-animation-duration: 1.25s;
             -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+
             animation-name: fadein;
             animation-duration: 1.25s;
             animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
             -moz-animation-name: fadein;
             -moz-animation-duration: 1.25s;
             -moz-animation-iteration-count: 1;
-            animation-fill-mode: forwards;
             -moz-animation-fill-mode: forwards;
-            -webkit-animation-fill-mode: forwards;
+            
         }
         #img{
             /* opacity: 0; */
@@ -380,8 +849,97 @@ export default {
                 transform:translateY(0px)
             }
         }
+        @-moz-keyframes moveUp {
+            0%{
+                transform:translateY(120px)
+            }
+            50% {
+                transform:translateY(120px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-webkit-keyframes  moveUp {
+            0%{
+                transform:translateY(120px)
+            }
+            50% {
+                transform:translateY(120px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-ms-keyframes moveUp {
+            0%{
+                transform:translateY(120px)
+            }
+            50% {
+                transform:translateY(120px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-o-keyframes moveUp {
+            0%{
+                transform:translateY(120px)
+            }
+            50% {
+                transform:translateY(120px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
 
         @keyframes moveDown {
+            0% {
+                transform:translateY(-100px)
+            }
+            50% {
+                transform:translateY(-100px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+
+        @-moz-keyframes moveDown {
+            0% {
+                transform:translateY(-100px)
+            }
+            50% {
+                transform:translateY(-100px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-webkit-keyframes  moveDown {
+            0% {
+                transform:translateY(-100px)
+            }
+            50% {
+                transform:translateY(-100px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-ms-keyframes moveDown {
+            0% {
+                transform:translateY(-100px)
+            }
+            50% {
+                transform:translateY(-100px)
+            }
+            100% {
+                transform:translateY(0px)
+            }
+        }
+        @-o-keyframes moveDown {
             0% {
                 transform:translateY(-100px)
             }
@@ -430,7 +988,7 @@ export default {
         #logo-text {
             /* opacity: 0; */
             font-weight:800;
-            font-size:2.8vw;
+            font-size:2vw;
         }
         #logo-sub-text {
             /* opacity: 0; */
@@ -447,23 +1005,69 @@ export default {
     .moveUp {
         animation: moveUp;
         animation-duration: 3s;
+
+        -webkit-animation: moveUp; /* Safari 4+ */
+        -webkit-animation-duration: 3s;
+
+        -moz-animation: moveUp; /* Fx 5+ */
+        -moz-animation-duration: 3s;
+
+        -o-animation: moveUp; /* Opera 12+ */
+        -o-animation-duration: 3s;
     }
     .moveDown {
         animation: moveDown;
         animation-duration: 3s;
+
+        -webkit-animation: moveDown; /* Safari 4+ */
+        -webkit-animation-duration: 3s;
+
+        -moz-animation: moveDown; /* Fx 5+ */
+        -moz-animation-duration: 3s;
+
+        -o-animation: moveDown; /* Opera 12+ */
+        -o-animation-duration: 3s;
     }
     .moveUpWithDelay {
         animation: moveUp;
         animation-duration: 6s;
+
+        -webkit-animation: moveUp; /* Safari 4+ */
+        -webkit-animation-duration: 3s;
+
+        -moz-animation: moveUp; /* Fx 5+ */
+        -moz-animation-duration: 3s;
+
+        -o-animation: moveUp; /* Opera 12+ */
+        -o-animation-duration: 3s;
 
     }
     .moveDownWithDelay {
         animation: moveDown;
         animation-duration: 6s;
         /* animation-delay: 3s; */
+
+        -webkit-animation: moveDown; /* Safari 4+ */
+        -webkit-animation-duration: 6s;
+
+        -moz-animation: moveDown; /* Fx 5+ */
+        -moz-animation-duration: 6s;
+
+        -o-animation: moveDown; /* Opera 12+ */
+        -o-animation-duration: 6s;
+        
     }
     .fadeIn {
         animation: fadeinWithDelay 10s;
+
+        -webkit-animation: fadeinWithDelay; /* Safari 4+ */
+        -webkit-animation-duration: 10s;
+
+        -moz-animation: fadeinWithDelay; /* Fx 5+ */
+        -moz-animation-duration: 10s;
+
+        -o-animation: fadeinWithDelay; /* Opera 12+ */
+        -o-animation-duration: 10s;
     }
     #logo-border {
         margin: 0px auto;
