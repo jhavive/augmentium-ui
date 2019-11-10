@@ -64,14 +64,13 @@ export default {
   /* overflow: hidden; */
   /* height:100%; */
   bottom: 0px;
-  overflow-y: scroll;
   width:90%;
 }
 .nav-items {
     float: left;
     /* height:100%; */
     /* height: 80px; */
-    padding:15px 20px;
+    padding:9px 20px;
     margin:0px 10px;
     font-size: .8em;
 }

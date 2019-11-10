@@ -23,8 +23,8 @@
                     <g id="content">
                         <image width="25%" id="img" height="25%" x="36%" y="8%" xlink:href="../../assets/images/logo.png" />
                     
-                        <text y="40%" fill="WHITE"  id="logo-text">AUGMENTIUM</text>
-                        <!-- <text y="40%" fill="WHITE" style="font-weight:800;font-size:5.5vw">AUGMENTIUM</text> -->
+                        <text y="40%" fill="WHITE"  id="logo-text" :textLength='logoTextLength' lengthAdjust="spacingAndGlyphs">AUGMENTIUM</text>
+                        <!-- <text y="40%" fill="WHITE" style="font-weight:800;font-size:5.5vw" >AUGMENTIUM</text> -->
                         
                         <text x="28%" y="57%" id="logo-sub-text" fill="WHITE">ADVISORS</text>
                     </g>
@@ -196,7 +196,8 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       // eslint-disable-next-line
-      secondTime: (localStorage.secondTime)?true:false
+      secondTime: (localStorage.secondTime)?true:false,
+      logoTextLength: (navigator.userAgent.indexOf("Chrome") != -1) ? "100%" : "78%"
     }
   }
 }

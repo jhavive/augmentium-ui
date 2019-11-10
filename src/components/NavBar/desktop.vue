@@ -35,7 +35,7 @@ export default {
 }
 .nav-items {
     float: left;
-    padding:15px 20px;
+    padding:9px 20px;
     margin:0px 10px;
     font-size: .8em;
 }

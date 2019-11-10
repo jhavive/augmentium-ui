@@ -291,6 +291,41 @@ const data = {
             'Post  merger  integration  services'
           ]
         }
+      ],
+      'Marketing and Sales Advisory':[
+        {
+          heading: 'M&A  Advisory  Services',
+          content: 'Augmentium provides in depth Marketing & Sales consultancy services in the following aspects, areas and sectors:'
+        },
+        {
+          subHeading: '1. FMCG / Food / Allied sectors:',
+          list: [
+            'Designing the Business model for Indian markets',
+            'Key strategies, structures and resourcing in Marketing and Sales &amp; Distribution',
+            'Go to Market strategies',
+            'Marketing strategies and processes including Brand Audits / strategies',
+            'Product, Packaging and Pricing strategies and processes',
+            'Selling and Distribution strategies and processes',
+            'Sales force management',
+            'Promotion management',
+            'Modern trade management',
+            'Implementation and review mechanisms',
+          ]
+        },
+        {
+          subHeading: '2. Retail',
+          list: [
+            'India Entry strategies',
+            'Designing the business model',
+            'Format strategies',
+            'Location and sizing strategies',
+            'Store EBITDA modeling',
+            'Operations review protocols',
+            'Merchandising strategies',
+            'Marketing, Promotion and CRM strategies',
+            'HR strategies',
+          ]
+        }
       ]
     },
     menuItems: [
@@ -300,7 +335,8 @@ const data = {
       'Corporate  and  Financial  Management',
       'Corporate  Finance',
       'Management  Information  Systems',
-      'M&A  Advisory  Services'
+      'M&A  Advisory  Services',
+      'Marketing and Sales Advisory'
     ]
   },
   client: {
