@@ -22,7 +22,7 @@ const data = {
         },
         {
           subSubHeading: 'Artistic Design',
-          subContent: 'thatlazydog.art@gmail.com'
+          subSubContent: 'thatlazydog.art@gmail.com'
         },
         {
           subSubHeading: 'Website Design',
