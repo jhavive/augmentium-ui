@@ -24,6 +24,7 @@
                 <div v-if="c.imagePath"><img :src="getImagePath(c.imagePath)"></div>
                 <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
                 <div v-if="c.subSubHeading" class="upper-container-content-subSubHeading">{{c.subSubHeading}}</div>
+                <div v-if="c.subSubContent" class="upper-container-content-subSubContent">{{c.subSubContent}}</div>
                 <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
                 <p v-if="c.subContent" class="upper-container-content-subContent">{{c.subContent}}</p>
                 <ul v-if="c.list" class="upper-container-content-content-list">
@@ -229,6 +230,10 @@ export default {
         margin:0px !important;
         font-size: 12px;
         font-weight: 800;
+    }
+    .upper-container-content-subSubContent {
+        margin-top: 10px !important;
+        font-size: 12px;
     }
     .upper-container-content-subContent {
         font-size: 10px !important;

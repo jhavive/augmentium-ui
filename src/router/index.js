@@ -22,7 +22,7 @@ const data = {
         },
         {
           subSubHeading: 'Artistic Design',
-          subContent: 'Mehek Nandwani'
+          subSubContent: 'thatlazydog.art@gmail.com'
         },
         {
           subSubHeading: 'Website Design',
