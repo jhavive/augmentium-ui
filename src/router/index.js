@@ -42,7 +42,7 @@ const data = {
     imagePath: "Team.png",    
     heading: 'Team',
     content: {
-      'Kannan  Dasaratharaman (Partner)': [
+      'Partners': [
         {
           heading: 'Kannan  Dasaratharaman (Partner)',
           content: 'Dasaratharaman  has  over  28  years  of  contribution  in  Sales,  Marketing  and  Business  Leadership  in  the  FMCG,  Food  and  Retail  sectors  including  many  startups. In  the  FMCG  sector,  he  has  worked  with  ITC  for  16  years  and  5  years  at  Heinz  spanning  various  roles  in  sales,  logistics  and  marketing.  He  rose  to  become  the  Head  of  Marketing  for  the  ITC  tobacco  business  and  was  the  Sales  Director  at  Heinz  in  charge  of  Domestic  sales,  CSD,  Bulk  Ghee,  Food  service,  Exports,  Supply  chain  and  the  Heinz  businesses  in  Sri  Lanka,  Bangladesh  and  Nepal.  While  at  ITC,  he  optimised  the  Supply  chain  using  linear  programming  models,  created  the  first  structured  sales  training  workshops,  launched  many  successful  brands  and  developed  a  Portfolio  model  based  on  consumer  insights.  He  was  also  responsible  for  the  sponsorship  of  the  Wills  Indian  (cricket)  Team  and  developed  a  Brand  spend  optimisation  model.  While  at  Heinz  he  crafted  the  turnaround  in  the  Sales  &  Distribution  function  and  set  global  benchmarks,  which  won  him  the  coveted  Chairman’s  Award  in  2006.   While  at  Sify,  he  headed  the  start-up  of  the  Digital  encryption  business  partnering  VeriSign  and  commenced  the  Carlsberg  business  in  India  as  MD  by  acquiring  a  brewery,  setting  up  another  and  launching  the  main  brands  besides  putting  together  the  management  team.  At  Spencer  Retail,  as  President  for  the  last  5  years,  he  has  headed  the  specialty  retail  businesses  of  Music  World,  Au  Bon  Pain  chain  of  cafes  and  BHPC  casual  apparel.  His  contributions  have  included  creating  the  business  models,  strategic  resourcing,  team  building  and  partner  management.  He  has  developed  both  strategic  and  operational  insights  into  several  businesses  and  honed  his  leadership  skills  through  these  experiences.  He  has  currently  set  out  to  be  a  Management  consultant,  educator  and  coach  and  is  a  visiting  faculty  at  leading  management  institutes.  He  has  served  on  several  industry  bodies  such  as  the  CII  and  ASCI.  He  is  on  the  boards  of  Praxis  business  school  and  peopleassess.com.  Dasaratharaman  is  a  Mechanical  engineer  from  IIT  Madras  and  a  PGDM  from  IIM  Ahmedabad  and  an  alumnus  of  the  Kellogg  School  Executive  programs. '
@@ -50,9 +50,7 @@ const data = {
         {
           subHeading: 'E-mail: dasaratharaman@augmentium.net',
           content: ''
-        }
-      ],
-      'Sameer  Nandwani (Partner)': [
+        },
         {
           heading: 'Sameer  Nandwani (Partner)',
           content: 'Sameer  brings  over  25  years  of  experience  in  the  consulting  and  corporate  sector.  Sameer  grew  up  in  the  UK  and  went  onto  to  work  for  Deloittes  before  relocating  to  India  in  the  mid  1990s,  at  the  time  of  India  opening  up  its  economy.  Sameer  has  spent  time  in  industry,  investment  banking  and  consulting  thereafter  during  which  time  he  has  focussed  on  the  following  areas:'
@@ -76,7 +74,7 @@ const data = {
           content: ''
         }
       ],
-      'Robinder  Sodhi \n (Principal Consultant)': [
+      'Consultants': [
         {
           heading: 'Robinder  Sodhi (Principal  Consultant)',
           content: 'Robinder is a seasoned banking professional with over 25 years’ experience spanning Wholesale/Corporate Banking, Banking Operations and Consumer Banking with HSBC and ABN/RBS. The experience of working in each of the 5 major banking markets in India viz Kolkata, Mumbai, Chennai, Delhi and Bengaluru, has given him unique exposure to dynamics of different markets and industry segments. As part of RBS India Bank Management Team and ALCO he was also actively involved in the Bank’s strategic planning and decision making. Given his length of experience, he has seen several economic cycles and the impact of these on client needs and resultant opportunities. Some key transactions he worked on include Aircraft financing for the national carrier, Global umbrella financing structure for a domestic pharma client, Structured Vendor Financing for a large domestic auto client, Offshore Bid Advisory and Financing for a leading Infra group and multiple other engagements with inbound and outbound clients on M&A, Equity and Lending. \n\n As Principal Consultant with Augmentium Advisors he works with start-ups and young companies across a spectrum of sectors mentoring them and helping them access equity and/or debt capital drawing from his relationships with multiple Seed and Venture funds, Family Offices and Banks. \n\n Robinder completed his BA (Economics Honours) in 1990 from Shri Ram College of Commerce, Delhi University and his MBA in 1992 from XLRI Jamshedpur.'
@@ -84,9 +82,7 @@ const data = {
         {
           subHeading: 'E-mail: robinder@augmentium.net',
           content: ''
-        }
-      ],
-      'Ravi Subramanian \n (Infrastructural Finance Consultant)': [
+        },
         {
           heading: 'Robinder  Sodhi (Principal  Consultant)',
           content: 'Ravi Subramanian has about 30 years experience in the corporate finance advisory market in India. Prior to setting up his own infrastructure advisory practice in 2003, he had worked with Rothschild India and Peregrine India, as head of their India transport  advisory business. Earlier, he worked across treasury, leasing and capital markets with SBI Capital Markets Limited in the early 1990s. Over the past two decades, he is focused on the financial and commercial advisory work pertaining to large infrastructure projects, especially those under a Public Private Partnership (PPP) Model.  He was involved with early road PPPs in the mid 1990s and went on to work in more than 50 projects, having seen full cycle of concessions and evolution of various bidding models. He has worked on three airports across India doing fund raising, privatisation advisory and tariff/regulatory assessments/business plan preparation, once again witnessing regulatory evolution and greenfield/brownfield models. Several thermal plants, power transmission concessions and fund raising for renewable energy also form part of the experience. In ports, his experience spans across solid, container and liquid terminals, including assisting clients right from pre-bid stage to financial closure achievement. While the bulk of the advisory work has been to Indian and multinational companies, Government entities have also been amongst his clients, thus lending a perspective of both sides of the table. Sectors currently covered include Airports, Railways, Ports, Highways, Metro rail, water, waste water treatment, desalination, renewable and thermal power, transmission etc. Specific assistance can be provided, inter alia, to international firms in the following aspects'
@@ -107,13 +103,29 @@ const data = {
           subHeading: '',
           content: 'Ravi completed his PGDM from IIM Calcutta in 1988. He is well connected to several corporates as well as an extensive eco-system of dependable specialists and consultants in various domains and sectors.'
         },
-        // {
-        //   subHeading: 'E-mail: robinder@augmentium.net',
-        //   content: ''
-        // }
+        {
+          subHeading: 'E-mail: robinder@augmentium.net',
+          content: ''
+        },
+        {
+          heading: 'Anjali Prasad (Corporate Law Consultant)',
+          content: 'Anjali Prasad brings 30 years of experience in the area of Indian corporate laws where she worked with the ITC Group (a leading corporate house in India) in various roles in the corporate secretarial function, including as Company Secretary of some of ITC’s financial subsidiary companies. While in ITC, she was responsible for compliance with statutory requirements pertaining to the Secretarial Department, including those under the Companies Act, the Listing Agreement, SEBI Takeover Regulations, and the SEBI (Listing Obligations and Disclosure) Requirements) Regulations. Anjali was also instrumental in the drafting and implementation of the Employee Stock Option Schemes of ITC, as well as administration of exercise of Options under the Schemes in accordance with the SEBI (Share Based Employee Benefits) Regulations, and related compliances. She was also involved in drafting the ITC Code of Conduct for Prevention of Insider Trading, and related compliances under the SEBI (Prohibition of Insider Trading) Regulations. Being part of one India’s foremost multi-business enterprise having diverse businesses, Anjali has also experience in the area of corporate governance, including governance structure and processes thereunder.'
+        },
+        {
+          subHeading: 'E-mail: anjali@augmentium.net',
+          content: ''
+        }
+      ],
+      'Strategic Alliance': [
+        {
+          heading: 'Inroads',
+          imagePath: "inroads.png",
+          content: 'We equip organizations to achieve great performance and meaningful growth on critical leadership skills, supported by high-energy workshops, coaching and consulting'
+        }
       ]
     },
-    menuItems: ['Kannan  Dasaratharaman (Partner)', 'Sameer  Nandwani (Partner)', 'Robinder  Sodhi \n (Principal Consultant)', 'Ravi Subramanian \n (Infrastructural Finance Consultant)']
+    // menuItems: ['Kannan  Dasaratharaman (Partner)', 'Sameer  Nandwani (Partner)', 'Robinder  Sodhi \n (Principal Consultant)', 'Ravi Subramanian \n (Infrastructural Finance Consultant)']
+    menuItems: ['Partners', 'Consultants', 'Strategic Alliance']
   },
   about: {
     imagePath: "About.png",

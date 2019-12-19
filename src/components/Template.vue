@@ -21,6 +21,7 @@
         <div class="upper-content">
             <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
                 <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
+                <div v-if="c.imagePath"><img :src="getImagePath(c.imagePath)"></div>
                 <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
                 <div v-if="c.subSubHeading" class="upper-container-content-subSubHeading">{{c.subSubHeading}}</div>
                 <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
