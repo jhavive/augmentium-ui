@@ -114,6 +114,10 @@ const data = {
         {
           subHeading: 'E-mail: anjali@augmentium.net',
           content: ''
+        },
+        {
+          heading: 'Sanjay Prasad (Principal  Consultant)',
+          content: 'Sanjay is a Mechanical Engineer from IIT, Kanpur and an MBA from IIM, Ahmedabad. He has also attended Strategy Programs at ISB, Hyderabad. He has almost 35 years of experience in business strategy, acquisitions, deal structuring, corporate development, sales, marketing and supply chain in healthcare, media, telecom and consumer durable sectors with leading Companies including IQ City Foundation (4 years), Medica Synergie (7 years), Times of India (6 years), Hindustan Times (2 years), Ananda Bazar Patrika (4 years), South Korea Telekom (3 years) and Godrej (5 years).  Was CEO of  IQ City Foundation in the last assignment. The Foundation has promoted a Medical College (intake of 150 MBBS students per year), a 800 bed Teaching Hospital and a Nursing College at a 100 acre campus at Durgapur.  As CEO, responsible for ensuring delivery of the agreed business plans for the Education and Healthcare businesses. Successfully turned around the performance to an EBIDTA positive venture. Prior to this, functioned as the CEO of Medica Superspecialty Hospital; a 350 bed superspecialty hospital at Kolkata, promoted by Medica Synergie, a healthcare startup venture in Eastern India, focused on providing quality and affordable health services. Was also responsible for the Strategy and   Business expansion function for the Group and meeting the expectations of the Private Equity Investors. Also have over 12 years of rich experience, at a senior level, in the Media Industry and as CEO, ABP TV Pvt. Ltd., led the Strategy function of ABP Group in the last assignment. Initiated the Groups diversifications into Television, Radio and Internet space. Specialties: Business Strategy, Deal Structuring, Profit Centre Management, Sales, Marketing, Brand Management, Supply Chain '
         }
       ],
       'Strategic Alliance': [
@@ -121,6 +125,24 @@ const data = {
           heading: 'Inroads',
           imagePath: "inroads.png",
           content: 'We equip organizations to achieve great performance and meaningful growth on critical leadership skills, supported by high-energy workshops, coaching and consulting'
+        },
+        {
+          heading: 'Chunder Khator & Associates',
+          content: 'Chunder Khator & Associates is a 24 years old firm of Chartered Accountants having 10 partners and over 40 qualified, semi-qualified staff, articles and paid assistants. The Firm has a multi-disciplinary team of professionals comprising of Chartered Accountant, Company Secretary, Cost & Management Accountant, empanelled Engineer and Legal professionals. The Firm has headquarters in Kolkata and branches in Mumbai and Singapore. The Firm’s mission is to deliver top-notch quality services while adding value and providing actionable solutions. The Firm provides wide range of professional services including'
+        },
+        {
+          list: [
+            'Assurance (Audit, Internal Audit, Statutory Compliance, Due Diligence) ',
+            'Advisory (Business Valuation) ',
+            'Tax Consulting & Compliance Services',
+            'Knowledge Process Outsourcing (Payroll. Book Keeping, Tax Returns preparation)',
+            'Corporate Training &Workshop',
+            'Human Resources (recruitment, policy setting)'
+
+          ]
+        },
+        {
+          subHeading: 'For more details visit: https://chunderkhator.com/',
         }
       ]
     },
