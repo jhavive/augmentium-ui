@@ -5,7 +5,6 @@
         <div class="lower-container">
             <div class="lower-container-content">
                 <div class="header-container">
-                    <!-- <img id="header-logo" src="../assets/images/Home.png"> -->
                     <img id="header-logo" :src="getImagePath(imagePath)">
                     <h2 class="lower-container-menu-header">{{heading}}</h2>
                 </div>
@@ -20,16 +19,39 @@
         </div>
         <div class="upper-content">
             <div class="upper-container-content" v-for="c in (selectedItem)?content[selectedItem]:content" v-bind:key="c">
-                <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
-                <div v-if="c.imagePath"><img :src="getImagePath(c.imagePath)"></div>
-                <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
-                <div v-if="c.subSubHeading" class="upper-container-content-subSubHeading">{{c.subSubHeading}}</div>
-                <div v-if="c.subSubContent" class="upper-container-content-subSubContent">{{c.subSubContent}}</div>
-                <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
-                <p v-if="c.subContent" class="upper-container-content-subContent">{{c.subContent}}</p>
-                <ul v-if="c.list" class="upper-container-content-content-list">
-                    <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
-                </ul>
+                <div v-if="c.length>0">
+                    <div v-for="acc_row in c" v-bind:key="acc_row">
+                        <div v-if="acc_row.accordian_header" v-on:click="toggle($event)" class="accordian-row">{{acc_row.accordian_header}}</div>
+                        <div>
+                            <div v-for="acc_body in acc_row.accordian_body" v-bind:key="acc_body">
+                                <div v-if="acc_body.heading"><h1>{{acc_body.heading}}</h1></div>
+                                <div v-if="acc_body.imagePath"><img :src="getImagePath(acc_body.imagePath)"></div>
+                                <div v-if="acc_body.subHeading" class="upper-container-content-subHeading"><h2>{{acc_body.subHeading}}</h2></div>
+                                <div v-if="acc_body.subSubHeading" class="upper-container-content-subSubHeading">{{acc_body.subSubHeading}}</div>
+                                <div v-if="acc_body.subSubContent" class="upper-container-content-subSubContent">{{acc_body.subSubContent}}</div>
+                                <p v-if="acc_body.content" class="upper-container-content-content">{{acc_body.content}}</p>
+                                <p v-if="acc_body.subContent" class="upper-container-content-subContent">{{acc_body.subContent}}</p>
+                                <ul v-if="acc_body.list" class="upper-container-content-content-list">
+                                    <li v-for="i in acc_body.list" v-bind:key="i">{{i}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div v-if="!c.accordian">
+                    <div v-if="c.heading"><h1>{{c.heading}}</h1></div>
+                    <div v-if="c.imagePath"><img :src="getImagePath(c.imagePath)"></div>
+                    <div v-if="c.subHeading" class="upper-container-content-subHeading"><h2>{{c.subHeading}}</h2></div>
+                    <div v-if="c.subSubHeading" class="upper-container-content-subSubHeading">{{c.subSubHeading}}</div>
+                    <div v-if="c.subSubContent" class="upper-container-content-subSubContent">{{c.subSubContent}}</div>
+                    <p v-if="c.content" class="upper-container-content-content">{{c.content}}</p>
+                    <p v-if="c.subContent" class="upper-container-content-subContent">{{c.subContent}}</p>
+                    <ul v-if="c.list" class="upper-container-content-content-list">
+                        <li v-for="i in c.list" v-bind:key="i">{{i}}</li>
+                    </ul>
+                </div>
+               
             </div>
         </div>
     </div>
@@ -60,6 +82,20 @@ export default {
             // let images = require.context('../assets/images/', false)
             // return images(item)
             return require('../assets/images/'+item);
+        },
+        toggle: function(e){
+            console.log(e.currentTarget)
+            if(e.target.className=="accordian-row"){
+                e.target.className="accordian-row-active"
+            } else if(e.currentTarget.className=="accordian-row"){
+                e.currentTarget.className=="accordian-row-active"
+            }else if(e.target.className=="accordian-row-active"){
+                e.target.className="accordian-row"
+            } else if(e.currentTarget.className=="accordian-row-active"){
+                e.currentTarget.className=="accordian-row"
+            }
+
+            // console.log(e)
         }
     },
     watch: { 
@@ -106,6 +142,9 @@ export default {
             width: 55%;
             height: 75%;
         }
+        .accordian-row,.accordian-row-active {
+            font-size: 30px;
+        }
     }
     @media only screen and (max-width: 1024px) {
         .lower-container{
@@ -118,6 +157,9 @@ export default {
             top: 150px;
             width: 65%;
             height: 65%;
+        }
+        .accordian-row,.accordian-row-active {
+            font-size: 20px;
         }
         
     }
@@ -146,6 +188,9 @@ export default {
         }
         .upper-container > *{
             font-size: 12px !important;
+        }
+        .accordian-row,.accordian-row-active {
+            font-size: 16px;
         }
     }
     .lower-container{
@@ -238,5 +283,19 @@ export default {
     .upper-container-content-subContent {
         font-size: 10px !important;
         color: #00000080
+    }
+    .accordian-row,.accordian-row-active {
+        background: white;
+        padding: 5px 10px;
+        margin: 5px;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .accordian-row + div{
+        display: none;
+    }
+    .accordian-row-active + div{
+        display: unset;
     }
 </style>
