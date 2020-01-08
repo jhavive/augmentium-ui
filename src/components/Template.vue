@@ -22,7 +22,7 @@
                 <div v-if="c.length>0">
                     <div v-for="acc_row in c" v-bind:key="acc_row">
                         <div v-if="acc_row.accordian_header" v-on:click="toggle($event)" class="accordian-row">{{acc_row.accordian_header}}</div>
-                        <div>
+                        <div class="accordian-body">
                             <div v-for="acc_body in acc_row.accordian_body" v-bind:key="acc_body">
                                 <div v-if="acc_body.heading"><h1>{{acc_body.heading}}</h1></div>
                                 <div v-if="acc_body.imagePath"><img :src="getImagePath(acc_body.imagePath)"></div>
@@ -87,8 +87,11 @@ export default {
             console.log(e.currentTarget)
             if(e.target.className=="accordian-row"){
                 e.target.className="accordian-row-active"
+                document.getElementsByClassName('upper-content')[0].scrollTop += 50;
             } else if(e.currentTarget.className=="accordian-row"){
+                e.currentTarget.scrollTo(0, 100)
                 e.currentTarget.className=="accordian-row-active"
+                document.getElementsByClassName('upper-content')[0].scrollTop += 50;
             }else if(e.target.className=="accordian-row-active"){
                 e.target.className="accordian-row"
             } else if(e.currentTarget.className=="accordian-row-active"){
@@ -143,7 +146,12 @@ export default {
             height: 75%;
         }
         .accordian-row,.accordian-row-active {
-            font-size: 30px;
+            font-size: 24px;
+            padding: 10px 20px;
+        }
+        .upper-container-content{
+            padding:10px 30px;
+            /* text-align: justify; */
         }
     }
     @media only screen and (max-width: 1024px) {
@@ -160,6 +168,11 @@ export default {
         }
         .accordian-row,.accordian-row-active {
             font-size: 20px;
+            padding: 10px 20px;
+        }
+        .upper-container-content{
+            padding:10px 0px;
+            /* text-align: justify; */
         }
         
     }
@@ -246,10 +259,7 @@ export default {
         overflow: scroll;
         font-family: 'Raleway'
     }
-    .upper-container-content{
-        padding:10px 30px;
-        /* text-align: justify; */
-    }
+    
     .upper-container-content-content {
         line-height:30px;
         white-space: pre-wrap;
@@ -284,13 +294,54 @@ export default {
         font-size: 10px !important;
         color: #00000080
     }
+
+
+    .accordian-body > div > *{
+        margin: -5px 10px 10px 10px;
+        padding: 0px 20px;
+        background:white;
+        border-left: 1px solid #2ab7ca;
+        border-right: 1px solid #2ab7ca;
+    }
+
+    .accordian-body > div > div > img{
+        margin-bottom: -6px;
+        padding-bottom: 6px;
+    }
+
+    .accordian-body > div > p{
+        margin-top: -5px;
+        padding-top: 10px;
+    }
+
+    .accordian-body > div > ul{
+        margin-top: -10px;
+        padding: 0px 50px;
+        margin-bottom: -6px;
+        padding-bottom: 10px;
+    }
+
+    .accordian-body > div > div > h2{
+        padding: 20px 0px;
+        margin-top: -20px;
+        border-bottom: 1px solid #2ab7ca;
+    }
+
+    .accordian-body {
+        /* height: auto;
+        width: 100%;
+        background:white;
+        border: 0.5px solid #e8e8e8;
+        padding: 5px; */
+         background:white;
+    }
     .accordian-row,.accordian-row-active {
         background: white;
-        padding: 5px 10px;
         margin: 5px;
-        border: 1px solid #e8e8e8;
+        border: 1px solid #2ab7ca;
         border-radius: 5px;
         cursor: pointer;
+        color: #2ab7ca;
     }
     .accordian-row + div{
         display: none;
